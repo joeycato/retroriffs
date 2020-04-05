@@ -8,6 +8,7 @@ categories:
 tags:
     - vr
     - netflix
+    - games
 ---
 
 A VR prototype created for the HTC Vive that lets you experience Netflix as if it were a vintage video rental store.

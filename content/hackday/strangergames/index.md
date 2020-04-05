@@ -10,6 +10,7 @@ categories:
 tags:
     - netflix
     - retro
+    - games
 ---
 
 For my recent [Netflix Hack Day](http://techblog.netflix.com/2017/01/netflix-hack-day-winter-2017.html) project, I had a
@@ -34,4 +35,4 @@ it's [received](http://www.digitaltrends.com/gaming/netflix-stranger-things-atar
 
 Click [here](http://strangergames.gorch.com) if you'd like to play _Stranger Games_.
 <br><br>
-![strangergames](strangergames.gif)
+![strangergames](./strangergames.gif)

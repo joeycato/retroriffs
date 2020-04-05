@@ -8,6 +8,7 @@ categories:
     - WebDev
 tags:
     - games
+    - retro
 ---
 
 Spent some vacation time making a small game. To win, you must eat all the dots, but with an added twist: All four mazes

@@ -23,7 +23,7 @@ The first thing that came to mind was Paper, Rock, Scissors, that classic game w
 <img src="prs.gif" style="width:171px" />
 
 <img src="prs.jpg" style="width:524px" />
-
+<br>
 In essence **PRS 2000** is a tile-based strategy game where each turn a player is presented with a random game piece (paper, rock or scissors) that they must drop onto the playing field. When a piece is dropped, the canonical rules of Paper, Rock, Scissors are applied against adjacent tiles, resulting in a zero-sum victory for the player or opponent. To accomplish this, defense is preemptively handled first. For example, if a blue player drops a rock on the board next to a red player's scissors and paper, then the red player will score the victory flag (since their red paper would initially defeat the blue rock.) Each turn a player drops their piece and as gameplay progresses, the board eventually fills up, making players think more carefully about where to drop their remaining pieces. The winner is the player with the most victory flags at the very end (after no more open tiles are left.)
 
 I coded the original prototype of this game as 2-player DOS application, but later I rewrote it as a Win32 application. Eventually, I added single-player mode (CPU follows a weighted-sum strategy) as well as two-player networking mode over TCP/IP. To make the game more attractive for long-time strategy enthusiasts, I added optional game pieces (dynamite, nukes, land mines, and treasure chests)

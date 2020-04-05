@@ -8,6 +8,7 @@ categories:
     - Nostalgia
 tags:
     - retro
+    - apps
 ---
 
 For my latest excursion in nostalgia, I decided to scan in an old (1981) city directory from my home town (Paris, Texas)

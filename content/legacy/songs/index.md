@@ -5,7 +5,7 @@ date: 2015-03-15 05:29
 cover: ""
 categories:
     - Legacy
-    - Music
+
 tags:
     - music
 ---

@@ -1,5 +1,5 @@
 ---
-title: boundless video player
+title: Boundless Video
 author: joey cato
 date: 2020-03-29 20:00
 cover: ""

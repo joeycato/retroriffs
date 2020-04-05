@@ -1,5 +1,5 @@
 ---
-title: Say Whaaat!!! (Netflix Subtitle Prototype)
+title: Say Whaaat!!!
 author: joey cato
 date: 2015-03-09 15:00
 cover: ""
