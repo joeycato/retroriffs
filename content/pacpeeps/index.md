@@ -18,4 +18,4 @@ Player controls: Arrow keys to move and SPACE to restart
 
 ![pacpeeps](pacpeeps.png)
 
-Click [here](http://gorch.com/pacpeeps) to play it.
+Click [here](https://gorch.com/pacpeeps) to play it.

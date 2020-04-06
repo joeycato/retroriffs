@@ -24,6 +24,6 @@ You can also upload your own custom videos if you choose.
 
 _Note: This hack was developed/tested primarily with the desktop version of Google Chrome ( experience may vary on other browsers )_
 
-Click [here](http://gorch.com/hacks/avp/) to play!
+Click [here](https://gorch.com/hacks/avp/) to play!
 
 ![avpscreen](avp_screen.png)

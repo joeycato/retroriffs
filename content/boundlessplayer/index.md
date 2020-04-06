@@ -26,4 +26,4 @@ https://bvp.surge.sh/
 
 Video of the app in action:
 
-[![YouTube video](http://img.youtube.com/vi/BEVUlyltP-g/0.jpg)](https://www.youtube.com/watch?v=BEVUlyltP-g "Paranoimia")
+[![YouTube video](https://img.youtube.com/vi/BEVUlyltP-g/0.jpg)](https://www.youtube.com/watch?v=BEVUlyltP-g "Paranoimia")

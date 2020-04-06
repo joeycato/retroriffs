@@ -18,4 +18,4 @@ A VR prototype created for the HTC Vive that lets you experience Netflix as if i
 Developing this VR demo was more fun that I originally expected. I decided to use _Unity_ for the project, since I was already familiar
 with C#. It was pretty intuitive getting adjusted to it, so I'll likely revisit it again in the future.
 
-NetflixZone was also featured in the [Netflix Tech Blog](http://techblog.netflix.com/2016/05/netflix-hack-day-spring-2016.html)
+NetflixZone was also featured in the [Netflix Tech Blog](https://netflixtechblog.com/netflix-hack-day-spring-2016-aae715280515)

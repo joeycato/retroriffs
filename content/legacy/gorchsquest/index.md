@@ -10,7 +10,7 @@ tags:
     - games
 ---
 
-[Gorch’s Quest](http://gorch.com/games/gq/) is a tile-based space adventure game inspired by Legend of Zelda.
+[Gorch’s Quest](https://gorch.com/games/gq/) is a tile-based space adventure game inspired by Legend of Zelda.
 
 <img src="gqlogo.gif" style="width:250px" />
 

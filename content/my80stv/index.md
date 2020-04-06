@@ -22,6 +22,6 @@ Recently I added genre filters, and my next goal is to extend them to include da
 
 On the tech side, I used this project as an opportunity to learn more about jQuery and CSS transitions.
 
-Click [here](http://my80stv.com) to check it out.
+Click [here](https://my80stv.com) to check it out.
 
-<a href="http://my80stv.com"><img src="tv80_400.jpg" alt="tv80" href="http://my80stv.com" style="width:400px"/></a>
+<a href="https://my80stv.com"><img src="tv80_400.jpg" alt="tv80" href="https://my80stv.com" style="width:400px"/></a>
