@@ -14,6 +14,6 @@ tags:
 For my latest excursion in nostalgia, I decided to scan in an old (1981) city directory from my home town (Paris, Texas)
 and create a interactive map from all of the local businesses listed back then.
 
-Click [here](https://gorch.com/paris1981) to try it!
+<b>UPDATE</b>: Unfortunately this app no longer works properly since [Google Fusion Tables has been discontinued.](https://gsuiteupdates.googleblog.com/2018/12/google-fusion-tables-to-be-shut-down-on.html)
 
 ![paristx1981](paristx1981.jpg)
