@@ -12,10 +12,10 @@ tags:
     - retro
 ---
 
-Just released my latest project, [SongBranch](https://songbranch.gorch.com). It's basically an interactive song lyric
+Just released my latest project, [SongBranch](https://songbranch.herokuapp.com/). It's basically an interactive song lyric
 visualization app.
 
-<a href="https://songbranch.gorch.com"><img src="sbsq.png" alt="songbranch_app" style="width:200px"/></a>
+<a href="https://songbranch.herokuapp.com/"><img src="sbsq.png" alt="songbranch_app" style="width:200px"/></a>
 
 The edges are colorized as a heat map based on the word/phrase frequency. There are three different
 graph views: The default **Normal** view uses a custom algorithm to display a graph the song lyrics in the fewest nodes
@@ -23,22 +23,22 @@ possible. The **Simple** view displays each song verse as an individual node, wh
 
 <br>
 
-[Daft Punk - Technologic](https://songbranch.gorch.com/?artistName=daft+punk&songTitle=technologic)
+[Daft Punk - Technologic](https://songbranch.herokuapp.com/?artistName=daft+punk&songTitle=technologic)
 
 ![daftpunk](sb_daftpunk_technologic.png)
 
-[Eminem - Rap God](https://songbranch.gorch.com/?artistName=eminem&songTitle=rap+god)
+[Eminem - Rap God](https://songbranch.herokuapp.com/?artistName=eminem&songTitle=rap+god)
 
 ![eminem](sb_eminem_rapgod-1024x556.png)
 
-[Madonna - Like a Prayer](https://songbranch.gorch.com/?artistName=madonna&songTitle=like+a+prayer)
+[Madonna - Like a Prayer](https://songbranch.herokuapp.com/?artistName=madonna&songTitle=like+a+prayer)
 
 ![madonna](sb_madonnalikeaprayer-1024x521.png)
 
-[Radiohead - Creep](https://songbranch.gorch.com/?artistName=radiohead&songTitle=creep)
+[Radiohead - Creep](https://songbranch.herokuapp.com/?artistName=radiohead&songTitle=creep)
 
 ![radiohead](sb_radioheadcreep-1024x563.png)
 
-[Chumbawumba - Tubthumping](https://songbranch.gorch.com/?artistName=chumbawumba&songTitle=tubthumping)
+[Chumbawumba - Tubthumping](https://songbranch.herokuapp.com/?artistName=chumbawumba&songTitle=tubthumping)
 
 ![chumbawumba](sb_chumbawumba-1024x556.png)
