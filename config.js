@@ -19,5 +19,5 @@ module.exports = {
     instagram: "https://www.instagram.com/joeycato/",
     rss: "/rss.xml",
   },
-  googleAnalyticTrackingId: process.env.GA_TRACKING_ID || "UA-112581073-2",
+  googleAnalyticTrackingId: "UA-112581073-2",
 }
