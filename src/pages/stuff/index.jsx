@@ -13,13 +13,13 @@ const Stuff = ({ data }) => (
     <Layout className="container">
       <Header />
       <SEO
-        title="Stuff"
-        description="I like to make things."
+        title="Stuff I've Made"
+        description="A hodgepodge collection of project I've created over the years"
         path="stuff"
       />
       <SidebarWrapper>
         <div className="marginTopTitle">
-          <h1 className="titleSeparate">Stuff</h1>
+          <h1 className="titleSeparate">Stuff I've Made</h1>
         </div>
         <Row gutter={[20, 20]}>
           {
