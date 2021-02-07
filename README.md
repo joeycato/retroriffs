@@ -9,13 +9,14 @@ Project commands
 - develop
   gatsby develop
 
-- format
-  prettier --write "\*_/_.{js,jsx,json,md}"
-
 - serve
   gatsby serve
 
 - start
+
+# NOTES
+
+Don't use `yarn format` ( right now it breaks the blog )
 
 # LOCAL DEV MODE
 
