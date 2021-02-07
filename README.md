@@ -22,3 +22,9 @@ Don't use `yarn format` ( right now it breaks the blog )
 
 yarn start
 http://localhost:8000/
+
+# PRODUCTION TESTING
+
+yarn build
+yarn serve
+http://localhost:9000/
