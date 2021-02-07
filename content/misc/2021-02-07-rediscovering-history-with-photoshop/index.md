@@ -9,7 +9,7 @@ excerpt: Generating panoramas from old videos
 
 While Photoshop is a great tool to have in your development arsenal for basic image editing needs ( we use it at work often for touching up logos and generating sprites for our on-screen TV keyboard ) I've also found it super helpful in various side projects ( such as [hand-coloring](https://en.wikipedia.org/wiki/Hand-colouring_of_photographs) or [retouching blemishes](https://helpx.adobe.com/photoshop/using/retouching-repairing-images.html) from old black & white photos. )
 
-Recently, I discovered it can also be used effectively to extracting panoramas from videos, as this [YouTube video](https://www.youtube.com/watch?v=nJ18lSMFGbA) demonstrates.
+Recently, I discovered it can also be used effectively to extract panoramas from videos, as this [YouTube video](https://www.youtube.com/watch?v=nJ18lSMFGbA) demonstrates.
 
 This inspired me to apply the same concept to a couple of historic videos taken from my hometown (Paris, Texas.) Granted, this older footage wasn't captured from a precisely-positioned drone. Nevertheless, I was still ultimately impressed with the results.
 
