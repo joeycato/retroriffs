@@ -1,10 +1,10 @@
 ---
 title: Bandersnatch Demo
-tags: [video, photoshop, panoramas]
+tags: [gamedev]
 date: 2018-12-31
 path: stuff/bandersnatch-demo
 cover: ./bandersnatchdemo.png
-excerpt: Reverse-engineering Bandersnatch with HTML5 Canvas
+excerpt: Reverse-engineering Bandersnatch
 ---
 
 I had the lucky privilege of being an early tester on the interactive [Bandersnatch](https://www.netflix.com/watch/80988062) title before it launched. Given that the film was set in the early 1980's, I was immediately hooked at first sight :)
