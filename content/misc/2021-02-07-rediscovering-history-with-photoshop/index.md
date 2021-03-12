@@ -30,3 +30,8 @@ This time I cranked it up a notch. In addition to generating multiple panoramas 
 <br/>
 
 I was quite amazed with the results. Seeing the old downtown square in one single wide shot gave me a unique way to view and appreciate the past.
+
+Here's a colorized version from the same shot:
+
+<img src="parispan27-square-comp-color.jpg" style="width: 900px;"/>
+<br/>
