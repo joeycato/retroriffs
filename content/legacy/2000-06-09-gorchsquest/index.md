@@ -4,7 +4,7 @@ tags: [gamedev, c++, 3d]
 date: 2000-06-09
 path: stuff/gorchsquest
 cover: ./gqlogo.png
-excerpt: 2D shoot-em-up game
+excerpt: 2D tile-based space adventure game
 ---
 
 [Gorch’s Quest](https://gorch.com/games/gq/) is a tile-based space adventure game inspired by Legend of Zelda.
