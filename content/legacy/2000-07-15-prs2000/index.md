@@ -4,7 +4,7 @@ tags: [gamedev, c++, networking]
 date: 2000-07-15
 path: stuff/prs2000
 cover: ./prs.png
-excerpt: 2D shoot-em-up game
+excerpt: tile-based strategy game
 ---
 
 I had a wonderful time making this game! The idea for <a title="Paper Rock Scissors 2000"

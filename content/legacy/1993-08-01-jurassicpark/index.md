@@ -4,7 +4,7 @@ tags: [gamedev, c]
 date: 1993-08-01
 path: stuff/jurassicpark
 cover: ./jp.png
-excerpt: 2D shoot-em-up game
+excerpt: BBS door game
 ---
 
 After reading Michael Crichton’s Jurassic Park novel, I felt inspired to try and capture the experience with my own game.

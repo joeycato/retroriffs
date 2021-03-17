@@ -4,7 +4,7 @@ tags: [gamedev]
 date: 2015-03-25
 path: stuff/pacpeeps
 cover: ./pacpeeps.png
-excerpt: Pacman Parallelized!
+excerpt: Pacman parallelized!
 ---
 
 Spent some vacation time making a small game. To win, you must eat all the dots, but with an added twist: All four mazes
