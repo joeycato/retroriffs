@@ -4,7 +4,7 @@ tags: [netflix, hackday]
 date: 2015-03-09
 path: stuff/hackday-saywhat
 cover: "./saywhat.png"
-excerpt: Netflix Fall 2019 Hack Day Submission
+excerpt: Netflix Fall 2019 Hack Day Winner
 ---
 
 **Say Whaaat!!!** provides a more convenient way to to catch missed dialogue as you watch Netflix by displaying

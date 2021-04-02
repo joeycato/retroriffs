@@ -4,7 +4,7 @@ tags: [netflix, hackday, gamedev]
 date: 2017-02-03
 path: stuff/hackday-strangergames
 cover: "./cover.png"
-excerpt: Netflix Winter 2017 Hack Day Submission
+excerpt: Netflix Winter 2017 Hack Day Winner
 ---
 
 For my recent [Netflix Hack Day](https://netflixtechblog.com/netflix-hack-day-winter-2017-73590a2fe513) project, I had a

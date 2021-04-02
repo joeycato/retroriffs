@@ -9,7 +9,7 @@ excerpt: A magic portal for your face
 
 Spent my end-of-year holiday break deep diving into iOS App Development.
 
-If you're brand to the new iOS dev ecosystem ( like me ) then I highly recommend you check out Dr. Angela Yu's [iOS & Swift - The Complete iOS App Development Bootcamp](https://www.udemy.com/course/ios-13-app-development-bootcamp/) course. Its pace and depth was perfect for my needs.
+If you're brand to the new iOS dev ecosystem ( like me ) then I highly recommend you check out Dr. Angela Yu's [iOS & Swift - The Complete iOS App Development Bootcamp](https://www.udemy.com/course/ios-13-app-development-bootcamp/) course. Its pace and depth were perfect for my needs.
 
 For my first app, I revisited my previous [boundless-video hack](/stuff/boundless-video) and decided to re-invent it with an interactive selfie mode. I was also inspired to create this after seeing the success of TikTok's [Time Warp video filter](https://www.insider.com/tiktok-time-warp-scan-filter-line-trends-how-to-2020-10). After navigating through the nuances of XCode development with Stack Overflow and Reddit by my side, I managed to launch an app!
 

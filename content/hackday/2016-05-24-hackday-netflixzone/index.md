@@ -4,7 +4,7 @@ tags: [netflix, hackday, vr, unity]
 date: 2016-05-24
 path: stuff/hackday-netflixzone
 cover: "./cover.png"
-excerpt: Netflix Spring 2016 Hack Day Submission
+excerpt: Netflix Spring 2016 Hack Day Winner
 ---
 
 A VR prototype created for the HTC Vive that lets you experience Netflix as if it were a vintage video rental store.

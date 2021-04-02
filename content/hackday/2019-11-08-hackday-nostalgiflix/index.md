@@ -4,7 +4,7 @@ tags: [netflix, hackday, vr]
 date: 2019-11-08
 path: stuff/hackday-nostalgiflix
 cover: "./cover.png"
-excerpt: Netflix Fall 2019 Hack Day Submission
+excerpt: Netflix Fall 2019 Hack Day Winner
 ---
 
 [Netflix Hack
