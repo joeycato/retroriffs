@@ -20,6 +20,5 @@ If you want to play around with my "experiment", here's the link:
 https://bandersnatchdemo.surge.sh/
 
 Please note that this was just a quick prototype I threw together. While basic movement of the player works, there's still quite a bit missing.
-If I ever get a chance to work on it again, perhaps the first thing I'd address is the Agent's wonky scale-based movement.
 
 <br/>
