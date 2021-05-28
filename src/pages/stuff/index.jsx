@@ -14,7 +14,7 @@ const Stuff = ({ data }) => (
       <Header />
       <SEO
         title="Stuff I've Made"
-        description="A hodgepodge collection of project I've created over the years"
+        description="A hodgepodge collection of projects I've created over the years"
         path="stuff"
       />
       <SidebarWrapper>
