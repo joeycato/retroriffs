@@ -4,7 +4,7 @@ tags: [nostalgia]
 date: 2021-05-27
 path: stuff/my2000sstv
 cover: ./tv00_400.jpg
-excerpt: An interactive TV simulator from the 1990's
+excerpt: An interactive TV simulator from the 2000's
 ---
 
 Excited today to announce the official launch of [My 2000's TV!](https://my00stv.com)
