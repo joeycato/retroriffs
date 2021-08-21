@@ -6,7 +6,7 @@ import { stripTags, domHtml } from '../../../utils/stripTags';
 import SEO from '../../Seo';
 
 const pageText = {
-  paraOne: `Hi! I'm Joey Cato. I like to make things.`,
+  paraOne: `Hi! I'm Joey Cato. I like to design interactive things.`,
   paraTwo: `Thanks for stopping by and entertaining my random thoughts and experiments.`,
 };
 
