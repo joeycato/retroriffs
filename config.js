@@ -13,10 +13,8 @@ module.exports = {
     stuff: "stuff",
   },
   social: {
-    github: "https://github.com/joey.cato",
-    facebook: "https://www.facebook.com/joey.cato/",
+    github: "https://github.com/joeycato",
     twitter: "https://twitter.com/joeycato",
-    instagram: "https://www.instagram.com/joeycato/",
     rss: "/rss.xml",
   },
   googleAnalyticTrackingId: "UA-112581073-2",
