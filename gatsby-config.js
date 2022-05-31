@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `joey's stuff`,
-    description: `I love to build interactive nostalgic things in my spare time. I find it's an incredibly fun way to exercise my passion for learning!`,
+    description: `I love to build interactive nostalgic things in my spare time. I find it's also a fun way to exercise my passion for learning.`,
     author: `Joey Cato`,
     siteUrl: `https://joeycato.com`,
     social: {

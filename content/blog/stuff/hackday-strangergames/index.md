@@ -22,7 +22,7 @@ Projecting the game screen onto the various TV sets was a bit of an afterthought
 television set makes numerous appearances throughout the episodes, so I figured including them would improve the
 immersion and effect. )
 
-Just as I experienced with [MyRetroTVs](https://www.myretrotvs.com), this project was an absolute joy to work on. And I'm very grateful for the
+This project was an absolute joy to work on. And I'm very grateful for the
 [recent](https://www.cnet.com/news/play-netflixs-atari-style-stranger-things-video-game/) [attention](https://www.popularmechanics.com/culture/tv/a24990/stranger-things-game/)
 it's [received](https://www.digitaltrends.com/gaming/netflix-stranger-things-atari-style-game/).
 
