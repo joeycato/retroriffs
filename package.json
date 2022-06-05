@@ -50,6 +50,7 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "dev": "gatsby develop",
     "develop": "gatsby develop",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
