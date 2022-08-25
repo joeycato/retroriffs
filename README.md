@@ -14,7 +14,9 @@ Inspired by [flexible-jekyll](https://github.com/artemsheludko/flexible-jekyll).
 
 ![blog-page-screenshot](./static/post-example.jpg)
 
-Based off of https://github.com/wangonya/flexible-gatsby
+## Setup
+
+npm install -g gatsby-cli
 
 ## Quick Start 🚀
 
