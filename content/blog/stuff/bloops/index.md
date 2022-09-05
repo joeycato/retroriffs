@@ -12,4 +12,4 @@ Can you beat all nine levels? :D
 
 [![Bloops](./bloops_flash.png)](https://bloops.surge.sh/ 'Flash Game')
 
-You can play the modern 3D version [here](https://bloops.surge.sh)
+You can play the modern 3D version [here](https://gorch.com/bloops/)
