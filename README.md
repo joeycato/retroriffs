@@ -18,6 +18,9 @@ Inspired by [flexible-jekyll](https://github.com/artemsheludko/flexible-jekyll).
 
 npm install -g gatsby-cli
 
+WARNING: If you're running Node v16 locally, you'l want to install this version instead:
+
+npm install -g gatsby-cli@4.7.0
 ## Quick Start 🚀
 
 1.  **Create a Gatsby site.**
