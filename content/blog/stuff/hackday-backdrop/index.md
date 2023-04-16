@@ -11,5 +11,4 @@ Netflix Backdrop is a browser extension that automatically generates a virtual b
 I had the pleasure of working on this hack with Nazanin Delam, Clarence Leung, Vishal Mishra, and Ghaida Zahran.
 
 Example: Removing Walter from Breaking Bad S1E1 ( Before & After )
-[![Example](./virtualbackdrop-example.png)]
-
+![Example](./virtualbackdrop-example.png)
