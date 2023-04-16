@@ -1,6 +1,6 @@
 ---
 title: Deep Nostalgia with Movie Posters
-tags: [video, photoshop]
+tags: [ai, video, photoshop]
 date: 2021-03-09
 path: stuff/deep-nostalgia-with-movie-posters
 img: ./cover.png
