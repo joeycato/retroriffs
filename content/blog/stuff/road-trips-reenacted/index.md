@@ -10,24 +10,24 @@ excerpt: Multi-video synchronization with FFmpeg
 
 [![Synced roadtrip from Paris, Texas](fakethumb.png)](https://www.youtube.com/watch?v=ojo1l0Wf2EI "Watch Video")
 
-Over the last winter break I spent time archiving an old collection of camcorder tapes to hard drive. Most of the
+Over the last winter break I spent time archiving a collection of old camcorder tapes to hard drive. Most of the
 recordings were just randomly-captured silly moments of yesteryear, but one particular set of videos caught my
-attention: a few scenic joyrides across the familiar streets and neighborhoods of my hometown (Paris, Texas 🤠) in 2003.
+attention: a few scenic joyrides across the streets and neighborhoods of my hometown (Paris, Texas 🤠) in 2003.
 
 Wondering exactly how much of the town had changed over the course of approximately 15 years, it occurred to me that I
-could effectively answer that question just by re-recording the same journeys on my next Texas visit and comparing the
-videos afterwards. Ultimately I wanted to create a split-screen video from this experiment, so accurate synchronization between the two videos was paramount.
+could answer that question by re-recording the same camcorder journeys on my next Texas visit and comparing the
+videos afterwards. Ultimately I wanted to create a split-screen video from this experiment, so synchronization was important.
 
-And so I decided to embark on a new side project which ended up rewarding me with a much better understanding of [**FFmpeg**](https://www.ffmpeg.org/),
+So I decided to embark on this new side project which ended up rewarding me with a much better understanding of [**FFmpeg**](https://www.ffmpeg.org/),
 a wonderfully versatile video editing tool. This blog post basically documents that experiment.
 
 I should briefly mention that while I work at Netflix, my official role there is as a _UI engineer_ so I don't
-consider myself an expert on _video_, even though it's a central component of our business.
+consider myself a _video_ expert, even though it's a central component of our business.
 If anything, I'm just doing things like this to learn more! 😀
 
 ## basic approach ( "slice, scale, and splice" )
 
-The basic synchronization strategy I adopted was to initially split up each video into separate clip segments, demarcated by the timestamps of common geographic locations shared between the two clips ( i.e. all encountered street intersections. ) Afterwards, each _2003_ segment was compared with its _2018_ counterpart and ( generally speaking ) the shorter/fastest segment video was "slowed down" until its duration matched the longer/slower segment.
+The basic sync strategy I pursued was to initially split up each video into separate clip segments, demarcated by the timestamps of common geographic locations shared between the two clips ( i.e. all encountered street intersections. ) Afterwards, each _2003_ segment was compared with its _2018_ counterpart and ( generally speaking ) the shorter/fastest segment video was "slowed down" until its duration matched the longer/slower segment.
 
 <svg xmlns="https://www.w3.org/2000/svg" width="705.15" height="367.772" viewBox="0 0 186.571 97.306"><path fill="#00d9d0" fill-opacity=".502" d="M2.374 9.566h17.828v6.682H2.374z"/><path fill="#f0f" d="M19.144 9.566h36.349v6.682h-36.35z"/><path fill="#00f" d="M55.492 9.566h14.426v6.682H55.492z"/><path fill="#0f0" d="M69.918 9.566h25.765v6.682H69.918z"/><path fill="#00d9d0" fill-opacity=".502" d="M2.374 76.043h32.305v6.682H2.374z"/><path fill="#f0f" d="M34.15 76.043h26.785v6.682H34.15z"/><path fill="#00f" d="M60.935 76.043h28.687v6.682H60.935z"/><path fill="#0f0" d="M89.623 76.043h38.49v6.682h-38.49z"/><path d="M2.374 16.248h16.77L33.62 42.177H1.315z" fill="#ececec"/><text style="line-height:1.25" x="59.039" y="27.592" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="59.039" y="27.592" font-size="7.056">2003 clip segment durations</tspan></text><text style="line-height:1.25" x="59.039" y="110.573" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="59.039" y="110.573" font-size="7.056">2018 clip segment durations</tspan></text><path d="M36.266 48.859h36.349l-11.68 27.185H34.15zm19.226-32.611h14.426l34.03 25.929H75.261zm92.239 32.611h37.483l-32.469 27.185h-24.631z" fill="#ececec"/><path fill="#ffd5d5" d="M95.923 9.566h37.483v6.682H95.923zm32.191 66.477h24.63v6.682h-24.63z"/><path fill="#00d9d0" fill-opacity=".502" d="M1.316 42.177H33.62v6.682H1.316z"/><path fill="#f0f" d="M36.267 42.177h36.349v6.682h-36.35z"/><path fill="#0f0" d="M106.594 42.177h38.49v6.682h-38.49z"/><path fill="#00f" d="M75.26 42.177h28.688v6.682H75.26z"/><path fill="#ffd5d5" d="M147.732 42.177h37.483v6.682h-37.483z"/><path d="M69.918 16.248h25.765l49.401 25.929h-38.49z" fill="#ececec"/><text style="line-height:1.25" x="61.187" y="59.818" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="61.187" y="59.818" font-size="7.056">longer segment durations</tspan></text></svg>
 
@@ -78,8 +78,7 @@ GUI ( affectionally named _Syncerator_ ) to manage this for me. By writing a cus
 shortcuts to add, edit and delete the points. I also eventually extended it to include a live preview mode ( taking
 advantage of HTML5 Video's adjustable _playbackRate_ property. )
 
-<center>(Screenshot of *Syncerator* app)</center>
-[![Syncerator](syncerator.jpg)](syncerator.jpg)
+[ ![Syncerator](syncerator.jpg)](syncerator.jpg)
 
 _Note:_ You might notice above that the two embedded video frames don't exactly match up. This is because my camcorders
 have different **[field of view](https://en.wikipedia.org/wiki/Field_of_view)** specs ( The newer lens has a
