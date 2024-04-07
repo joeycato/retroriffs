@@ -2,7 +2,7 @@
 title: Stranger Games
 tags: [netflix, hackday, gamedev]
 date: 2017-02-03
-img: "./cover.png"
+img: './cover.png'
 excerpt: Netflix Winter 2017 Hack Day Winner
 ---
 
@@ -26,6 +26,6 @@ This project was an absolute joy to work on. And I'm very grateful for the
 [recent](https://www.cnet.com/news/play-netflixs-atari-style-stranger-things-video-game/) [attention](https://www.popularmechanics.com/culture/tv/a24990/stranger-things-game/)
 it's [received](https://www.digitaltrends.com/gaming/netflix-stranger-things-atari-style-game/).
 
-Click [here](https://strangergames.gorch.com) if you'd like to play _Stranger Games_.
+Click [here](https://gorch.com/strangergames/) if you'd like to play _Stranger Games_.
 <br><br>
 ![strangergames](./strangergames.gif)
