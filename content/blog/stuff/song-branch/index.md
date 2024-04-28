@@ -6,6 +6,8 @@ img: ./sbsq.png
 excerpt: Interactive song lyric visualization
 ---
 
+<img class="aligncenter" src="./sbsq.png" alt="" />
+
 Just released my latest project, [SongBranch](https://songbranch.herokuapp.com/). It's basically an interactive song lyric
 visualization app.
 

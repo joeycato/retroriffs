@@ -81,15 +81,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY, MMM DD")
         tags
-        img {
-          childImageSharp {
-            gatsbyImageData(
-              placeholder: BLURRED
-              layout: FULL_WIDTH
-              formats: [AUTO, AVIF, WEBP]
-            )
-          }
-        }
       }
     }
   }

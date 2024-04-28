@@ -6,6 +6,8 @@ img: ./prs.png
 excerpt: tile-based strategy game
 ---
 
+<img class="aligncenter" src="./prs.png" alt="" />
+
 I had a wonderful time making this game! The idea for <a title="Paper Rock Scissors 2000"
 href="https://gorch.com/games/prs/" target="_blank" rel="noopener">Paper Rock Scissors 2000</a> came to me one day while
 I was trying to imagine a strategy game that would be incredibly simple for anyone to learn and play.

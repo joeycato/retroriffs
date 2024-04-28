@@ -6,6 +6,8 @@ img: ./tv80_400.jpg
 excerpt: An interactive TV simulator from the 1980's
 ---
 
+<img class="aligncenter" src="./tv80_400.jpg" alt="" />
+
 I’ve always been a huge 80’s nostalgia nut, so I decided honor the decade with my newest web project: My 80’s TV!
 
 The basic goal of this project is to simulate the vintage experience of channel-surfing on a TV from the 80’s decade as much as possible.

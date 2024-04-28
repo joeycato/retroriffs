@@ -6,6 +6,8 @@ img: ./rickrollfx.png
 excerpt: I have no idea why I made this but it was fun
 ---
 
+<img class="aligncenter" src="./rickrollfx.png" alt="" />
+
 I have no idea why I made this but it was fun!
 
 [RickRollFx](https://rickrollfx.surge.sh/)

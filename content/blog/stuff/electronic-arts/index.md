@@ -6,6 +6,8 @@ img: ./thesims.png
 excerpt: My career at Electronic Arts
 ---
 
+<img class="aligncenter" src="./thesims.png" alt="" />
+
 After nine exciting years working at EA, I decided it was time for a career change.
 
 Here's a list of all the industry titles I directly worked on as a software engineer contributing to _The Sims_ team:

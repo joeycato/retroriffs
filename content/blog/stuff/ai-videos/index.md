@@ -12,6 +12,4 @@ Most recently I used [Deforum](https://docs.google.com/document/d/1RrQv7FntzOuLg
 
 [![Quest](https://img.youtube.com/vi/_tHkj88Kxgk/0.jpg)](https://www.youtube.com/watch?v=_tHkj88Kxgk 'Quest')
 
-
 [![Spaceship](https://img.youtube.com/vi/E3L_D66uSow/0.jpg)](https://www.youtube.com/watch?v=E3L_D66uSow 'Spaceship')
-

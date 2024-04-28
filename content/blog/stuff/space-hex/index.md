@@ -6,6 +6,8 @@ img: ./spacehex.jpg
 excerpt: An HTML5 hexagon-based puzzle game
 ---
 
+<img class="aligncenter" src="./spacehex.jpg" alt="" />
+
 [Space Hex!](https://www.gorch.com/games/spacehex/) is another web game I created while playing around with HTML5 Canvas.
 
 This one is puzzle-based (no lightning-fast reflexes required 🙂 ) It should run on most platforms (Only sound was missing when I tested on iPad / Android )

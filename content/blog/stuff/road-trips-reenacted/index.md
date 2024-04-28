@@ -6,9 +6,11 @@ img: ./cover.png
 excerpt: Multi-video synchronization with FFmpeg
 ---
 
+<img class="aligncenter" src="./cover.png" alt="" />
+
 # Multi-Video Synchronization with FFmpeg
 
-[![Synced roadtrip from Paris, Texas](fakethumb.png)](https://www.youtube.com/watch?v=ojo1l0Wf2EI "Watch Video")
+[![Synced roadtrip from Paris, Texas](fakethumb.png)](https://www.youtube.com/watch?v=ojo1l0Wf2EI 'Watch Video')
 
 Over the last winter break I spent time archiving a collection of old camcorder tapes to hard drive. Most of the
 recordings were just randomly-captured silly moments of yesteryear, but one particular set of videos caught my

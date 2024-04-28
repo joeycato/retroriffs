@@ -6,6 +6,8 @@ img: ./bvplogo.png
 excerpt: Slit-scan project
 ---
 
+<img class="aligncenter" src="./bvplogo.png" alt="" />
+
 Today I released the <b>Boundless video player</b>, a side project I've been tinkering on over the fast few months:
 
 https://github.com/joeycato/boundlessvideoplayer
@@ -18,4 +20,4 @@ https://bvp.surge.sh/
 
 Demo:
 
-[![YouTube video](https://img.youtube.com/vi/BEVUlyltP-g/0.jpg)](https://www.youtube.com/watch?v=BEVUlyltP-g "Paranoimia")
+[![YouTube video](https://img.youtube.com/vi/BEVUlyltP-g/0.jpg)](https://www.youtube.com/watch?v=BEVUlyltP-g 'Paranoimia')

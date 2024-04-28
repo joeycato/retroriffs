@@ -2,9 +2,11 @@
 title: Nostalgiflix
 tags: [netflix, hackday, vr]
 date: 2019-11-08
-img: "./cover.png"
+img: './cover.png'
 excerpt: Netflix Fall 2019 Hack Day Winner
 ---
+
+<img class="aligncenter" src="./cover.png" alt="" />
 
 [Netflix Hack
 Day - Fall 2019](https://netflixtechblog.com/netflix-hack-day-november-2019-c9b31d95d134) has now passed and I used this occasion to further my skills with ReactJS, CSS, and Chrome extensions. I also wanted to take this opportunity to apply the My80sTV concept to Netflix :)
@@ -13,4 +15,4 @@ Day - Fall 2019](https://netflixtechblog.com/netflix-hack-day-november-2019-c9b3
 
 Shout out to the other members of my team ( [Nazanin Delam](https://twitter.com/naz_intech), [Sumana Mohan](https://www.linkedin.com/in/msumana/), [Jeff Shi](https://www.linkedin.com/in/shijeff/), [Lily Dwyer](https://twitter.com/lilymdwyer),[Vishal Mishra](https://www.linkedin.com/in/mishravishal/) ) who helped make this hack come alive!
 
-[![YouTube video](https://img.youtube.com/vi/46Annm1Sxbs/0.jpg)](https://www.youtube.com/watch?v=46Annm1Sxbs "Nostalgiflix")
+[![YouTube video](https://img.youtube.com/vi/46Annm1Sxbs/0.jpg)](https://www.youtube.com/watch?v=46Annm1Sxbs 'Nostalgiflix')

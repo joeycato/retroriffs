@@ -6,6 +6,8 @@ img: ./faceportalapp.png
 excerpt: A magic portal for your face
 ---
 
+<img class="aligncenter" src="./faceportalapp.png" alt="" />
+
 Spent my end-of-year holiday break deep diving into iOS App Development.
 
 If you're brand to the new iOS dev ecosystem ( like me ) then I highly recommend you check out Dr. Angela Yu's [iOS & Swift - The Complete iOS App Development Bootcamp](https://www.udemy.com/course/ios-13-app-development-bootcamp/) course. Its pace and depth were perfect for my needs.

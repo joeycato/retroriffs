@@ -6,6 +6,8 @@ img: ./avplogov.png
 excerpt: Netflix Winter 2018 Hack Day Submission
 ---
 
+<img class="aligncenter" src="./avplogov.png" alt="" />
+
 Wow, time has flown! Yet another [Netflix Hack Day](https://medium.com/netflix-techstuff/netflix-hack-day-winter-2018-b36ee09699d6) has come to pass. For the Winter 2018 event, I decided to experiment with the combination of HTML5 Video and Canvas. The result of that effort is the Altered Video Player!
 
 **AVP** is basically a video player that autogenerates a jigsaw puzzle from its source in real-time ( in this case a selected Netflix Original trailer.)

@@ -2,9 +2,11 @@
 title: Netflix Zone (VR Prototype)
 tags: [netflix, hackday, vr, unity]
 date: 2016-05-24
-img: "./cover.png"
+img: './cover.png'
 excerpt: Netflix Spring 2016 Hack Day Winner
 ---
+
+<img class="aligncenter" src="./cover.png" alt="" />
 
 A VR prototype created for the HTC Vive that lets you experience Netflix as if it were a vintage video rental store.
 

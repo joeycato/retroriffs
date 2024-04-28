@@ -6,6 +6,8 @@ img: ./bandersnatchdemo.png
 excerpt: Reverse-engineering Bandersnatch
 ---
 
+<img class="aligncenter" src="./bandersnatchdemo.png" alt="" />
+
 I had the lucky privilege of being an early tester on Netflix's interactive [Bandersnatch](https://www.netflix.com/watch/80988062) title before it launched. Given that the film was set in the early 1980's, I was immediately hooked at first sight :)
 
 I was also particularly impressed with the fictitious _Bandersnatch_ game the plot revolved around and how realistic it appeared in the various scenes ( at first viewing it definitely looked like a game that would have been created from the technology of the time. )

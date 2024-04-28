@@ -6,6 +6,8 @@ img: ./gqlogo.png
 excerpt: 2D tile-based space adventure game
 ---
 
+<img class="aligncenter" src="./gqlogo.png" alt="" />
+
 [Gorch’s Quest](https://gorch.com/games/gq/) is a tile-based space adventure game inspired by Legend of Zelda.
 
 You are the young hero, Gorch, who must save his planet from the attack of an alien empire that indulges in galactic domination. To do so, you must navigate the catacombs of the Planetary Defense System that has been sabotaged. Find and return the five crystals to the main control room so that the defense system can be reactivated. Good Luck!

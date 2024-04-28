@@ -6,9 +6,11 @@ img: ./logo.png
 excerpt: Georeferencing century-old fire insurance maps
 ---
 
+<img class="aligncenter" src="./logo.png" alt="" />
+
 # Georeferencing Century-Old Fire Insurance Maps
 
-So recently I discovered these <a href="https://www.loc.gov/resource/g4034pm.g4034pm_g086921914/?st=gallery" target="_blank">old fire insurance maps</a> from 1914 of my hometown of Paris, Texas. 
+So recently I discovered these <a href="https://www.loc.gov/resource/g4034pm.g4034pm_g086921914/?st=gallery" target="_blank">old fire insurance maps</a> from 1914 of my hometown of Paris, Texas.
 
 I was pretty impressed with the level of detail they conveyed. By referencing the following Sanborn key/legend it was fairly straightforward to determine specific traits of these older buildings / houses such as the materials used and the number of stories.
 
@@ -20,9 +22,9 @@ I've always been a bit curious about what the town of Paris looked like over a c
 
 <img src="./firemap.png" alt="area of fire damage" />
 
-*Note:* Ironically on that same day in which this blaze started, many of the city's leaders had met earlier to discuss a <a href="/img/cityplan1914.jpg" target="_blank">city plan proposal</a> to renovate and extend the city. Ultimately those plans were dismissed though I do wonder if they would have been accepted if the fire's damage and subsequent rebuild costs had not refocused priorities.
+_Note:_ Ironically on that same day in which this blaze started, many of the city's leaders had met earlier to discuss a <a href="/img/cityplan1914.jpg" target="_blank">city plan proposal</a> to renovate and extend the city. Ultimately those plans were dismissed though I do wonder if they would have been accepted if the fire's damage and subsequent rebuild costs had not refocused priorities.
 
-Gazing at <a href="https://www.loc.gov/resource/g4034pm.g4034pm_g086921914/?sp=5" target="_blank">each</a> of these insurance map sections individually was fine for casual curiosity but I figured it would be more convenient and practical to stitch them together into one larger map. So I did just that and used a current city map image as a guide layer to help me accurately align the pieces. Afterwards I used <a href="https://www.georeferencer.com/" target="_blank">Georeferencer</a> to convert the resulting image into an official map overlay so that I could then easily compare it against a modern city map from today ( using a slider to adjust the transparency. ) 
+Gazing at <a href="https://www.loc.gov/resource/g4034pm.g4034pm_g086921914/?sp=5" target="_blank">each</a> of these insurance map sections individually was fine for casual curiosity but I figured it would be more convenient and practical to stitch them together into one larger map. So I did just that and used a current city map image as a guide layer to help me accurately align the pieces. Afterwards I used <a href="https://www.georeferencer.com/" target="_blank">Georeferencer</a> to convert the resulting image into an official map overlay so that I could then easily compare it against a modern city map from today ( using a slider to adjust the transparency. )
 
 <a href="https://www.georeferencer.com/maps/4df4b519-a3cf-4131-ba92-241d260ce734/view#235563406496" target="_blank"><img class="aligncenter" src="./georef.gif" alt="slider animation" /></a>
 

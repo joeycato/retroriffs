@@ -6,6 +6,8 @@ img: './cover.png'
 excerpt: Netflix Winter 2017 Hack Day Winner
 ---
 
+<img class="aligncenter" src="./cover.png" alt="" />
+
 For my recent [Netflix Hack Day](https://netflixtechblog.com/netflix-hack-day-winter-2017-73590a2fe513) project, I had a
 strong desire to create something based on [Stranger Things](https://www.netflix.com/title/80057281), a Netflix Original
 that debuted last year and quickly quenched my thirst of 80's nostalgia.

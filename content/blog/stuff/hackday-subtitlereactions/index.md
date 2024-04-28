@@ -2,9 +2,11 @@
 title: Subtitle Reactions
 tags: [netflix, hackday, extension]
 date: 2017-08-31
-img: "./cover.png"
+img: './cover.png'
 excerpt: Netflix Summer 2017 Hack Day Submission
 ---
+
+<img class="aligncenter" src="./cover.png" alt="" />
 
 [Netflix Hack
 Day](https://www.theverge.com/tldr/2017/8/29/16221508/netflix-hack-day-summer-2018-teleflix-spookyflix-raspberry-pi) has

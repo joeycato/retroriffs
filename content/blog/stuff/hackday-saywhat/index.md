@@ -2,9 +2,11 @@
 title: Say Whaaat!!!
 tags: [netflix, hackday]
 date: 2015-03-09
-img: "./saywhat.png"
+img: './saywhat.png'
 excerpt: Netflix Fall 2019 Hack Day Winner
 ---
+
+<img class="aligncenter" src="./saywhat.png" alt="" />
 
 **Say Whaaat!!!** provides a more convenient way to to catch missed dialogue as you watch Netflix by displaying
 subtitles when you pause playback.

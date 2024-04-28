@@ -7,6 +7,8 @@ img: ./parispan64-square-ne.png
 excerpt: Generating panoramas from old videos
 ---
 
+<img class="aligncenter" src="./parispan64-square-ne.png" alt="" />
+
 While Photoshop is a great tool to have in your development arsenal for basic image editing needs ( we use it at work often for touching up logos and generating sprites for our on-screen TV keyboard ) I've also found it super helpful in various side projects ( such as [hand-coloring](https://en.wikipedia.org/wiki/Hand-colouring_of_photographs) or [retouching blemishes](https://helpx.adobe.com/photoshop/using/retouching-repairing-images.html) from old black & white photos. )
 
 Recently, I discovered it can also be used effectively to extract panoramas from videos, as this [YouTube video](https://www.youtube.com/watch?v=nJ18lSMFGbA) demonstrates.
