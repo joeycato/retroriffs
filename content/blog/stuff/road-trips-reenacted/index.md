@@ -6,8 +6,6 @@ img: ./cover.png
 excerpt: Multi-video synchronization with FFmpeg
 ---
 
-<img class="aligncenter" src="./cover.png" alt="" />
-
 # Multi-Video Synchronization with FFmpeg
 
 [![Synced roadtrip from Paris, Texas](fakethumb.png)](https://www.youtube.com/watch?v=ojo1l0Wf2EI 'Watch Video')

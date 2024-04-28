@@ -6,7 +6,7 @@ img: ./cover.jpg
 excerpt: Visualize your observables in ASCII
 ---
 
-<img class="aligncenter" src="./cover.png" alt="" />
+<img class="aligncenter" src="./cover.jpg" alt="" />
 
 An RxJS library wrapper that lets you execute Rx operators directly using marble-diagram ASCII string arguments.
 

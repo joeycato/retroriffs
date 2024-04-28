@@ -2919,7 +2919,7 @@
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.6.2"
 
-"babel-plugin-remove-graphql-queries@^4.25.0":
+"babel-plugin-remove-graphql-queries@^4.25.0", "babel-plugin-remove-graphql-queries@^4.7.0":
   "integrity" "sha512-enyqRNRrn7vTG3nwg1V+XhoAJIyUv3ZukQCs5KbHOK+WNDDiGZQzIG+FCiZFACScdZBJWyx7TYRYbOFJZ/KEGg=="
   "resolved" "https://registry.npmjs.org/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.25.0.tgz"
   "version" "4.25.0"
@@ -3442,7 +3442,7 @@
     "parse5-htmlparser2-tree-adapter" "^6.0.1"
     "tslib" "^2.2.0"
 
-"chokidar@^3.4.2", "chokidar@^3.5.3", "chokidar@>=3.0.0 <4.0.0":
+"chokidar@^3.4.2", "chokidar@^3.5.2", "chokidar@^3.5.3", "chokidar@>=3.0.0 <4.0.0":
   "integrity" "sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw=="
   "resolved" "https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz"
   "version" "3.5.3"
@@ -4179,7 +4179,7 @@
   "resolved" "https://registry.npmjs.org/deep-is/-/deep-is-0.1.4.tgz"
   "version" "0.1.4"
 
-"deepmerge@^4.2.2":
+"deepmerge@^4.0.0", "deepmerge@^4.2.2":
   "integrity" "sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg=="
   "resolved" "https://registry.npmjs.org/deepmerge/-/deepmerge-4.2.2.tgz"
   "version" "4.2.2"
@@ -5460,7 +5460,7 @@
   "resolved" "https://registry.npmjs.org/fs-exists-cached/-/fs-exists-cached-1.0.0.tgz"
   "version" "1.0.0"
 
-"fs-extra@^10.1.0":
+"fs-extra@^10.0.0", "fs-extra@^10.1.0":
   "integrity" "sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ=="
   "resolved" "https://registry.npmjs.org/fs-extra/-/fs-extra-10.1.0.tgz"
   "version" "10.1.0"
@@ -5576,7 +5576,7 @@
     "yoga-layout-prebuilt" "^1.10.0"
     "yurnalist" "^2.1.0"
 
-"gatsby-core-utils@^3.25.0":
+"gatsby-core-utils@^3.25.0", "gatsby-core-utils@^3.7.0":
   "integrity" "sha512-lmMDwbnKpqAi+8WWd7MvCTCx3E0u7j8sbVgydERNCYVxKVpzD/aLCH4WPb4EE9m1H1rSm76w0Z+MaentyB/c/Q=="
   "resolved" "https://registry.npmjs.org/gatsby-core-utils/-/gatsby-core-utils-3.25.0.tgz"
   "version" "3.25.0"
@@ -5654,32 +5654,31 @@
     "@parcel/transformer-json" "2.6.2"
 
 "gatsby-plugin-google-gtag@^4.18.0":
-  "integrity" "sha512-mzhjor5JYct1qQWLKayAHuyOHGHW3TT8Ns5fgdmSlqsmAR0X6dAh7zqSfqbvetGU309PZrRXeOrL92vjmeSIdQ=="
-  "resolved" "https://registry.npmjs.org/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.25.0.tgz"
-  "version" "4.25.0"
+  "integrity" "sha512-oLIFmndlvmPyMlDR2z0NkTyTg05VLIi6vYlCUiqOaf1AOQKkmV9UxX0pwCDGuKxQPGIY3n8UkhkSqERIvQL2Dw=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.18.0.tgz"
+  "version" "4.18.0"
   dependencies:
     "@babel/runtime" "^7.15.4"
     "minimatch" "^3.1.2"
 
 "gatsby-plugin-image@^2.7.0":
-  "integrity" "sha512-Q1TRjvBF7x50alS22i91rksl7A3g42S0jIdPEQcT9bl8MbFaJiboHGna/jp78nxm9vu4qtUJ1IziRSOu0bgHNQ=="
-  "resolved" "https://registry.npmjs.org/gatsby-plugin-image/-/gatsby-plugin-image-2.25.0.tgz"
-  "version" "2.25.0"
+  "integrity" "sha512-IVX/c0O/5QL505hla74Pt9i7xtv5zFBeYiYqG9gyejtZ3YuM0Opid3Rs+IIn1LN3fjM/xBrqp8yL7/XN/p24fw=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-image/-/gatsby-plugin-image-2.7.0.tgz"
+  "version" "2.7.0"
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
     "@babel/runtime" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     "babel-jsx-utils" "^1.1.0"
-    "babel-plugin-remove-graphql-queries" "^4.25.0"
+    "babel-plugin-remove-graphql-queries" "^4.7.0"
     "camelcase" "^5.3.1"
-    "chokidar" "^3.5.3"
+    "chokidar" "^3.5.2"
     "common-tags" "^1.8.2"
-    "fs-extra" "^10.1.0"
-    "gatsby-core-utils" "^3.25.0"
-    "gatsby-plugin-utils" "^3.19.0"
+    "fs-extra" "^10.0.0"
+    "gatsby-core-utils" "^3.7.0"
     "objectFitPolyfill" "^2.3.5"
-    "prop-types" "^15.8.1"
+    "prop-types" "^15.7.2"
 
 "gatsby-plugin-manifest@^4.7.0":
   "integrity" "sha512-2n7v+TvhWUMoOJEaeiPDFsf9jvOImKLZpnzxE8e6ZeeoGeDngXSZhkkP3x2UYIknHtZXUUjFJh8BaVBXiB1dSQ=="
@@ -5724,16 +5723,16 @@
     "lodash" "^4.17.21"
 
 "gatsby-plugin-react-helmet@^5.7.0":
-  "integrity" "sha512-sU/xae/sGuYFcFDpqUxwXnaOmx8xrU2Q+XSULqAapji0uTBhW6al6CJsaPFigi8IOG2bQX8ano2iWWcGF3/GHw=="
-  "resolved" "https://registry.npmjs.org/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.25.0.tgz"
-  "version" "5.25.0"
+  "integrity" "sha512-FjEYMNzT/+dfbk6+UGvnD+L2MuKburF/uayLZqAItAOLbYUK3x2BZzlyBb6X4+jjIrXq9LP6vHa4PipCXoqUyw=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.7.0.tgz"
+  "version" "5.7.0"
   dependencies:
     "@babel/runtime" "^7.15.4"
 
 "gatsby-plugin-sass@^5.7.0":
-  "integrity" "sha512-e+47Z24DI+Uh3KcUbj/WvTyH4ZPXcC4zlwqhzspv1Ye+xMS1ipTsIelvBuTwiiEWBs6cqdcYAPhn7HoXX/errw=="
-  "resolved" "https://registry.npmjs.org/gatsby-plugin-sass/-/gatsby-plugin-sass-5.25.0.tgz"
-  "version" "5.25.0"
+  "integrity" "sha512-9G+oGcrCDUmnRuiJFpCVM70DB1LboTF+LmpOmwCgdTCKCdUfE//EB0iyqsq+QABpRfCPYJ03nSgs+RuLPw6DCA=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-sass/-/gatsby-plugin-sass-5.7.0.tgz"
+  "version" "5.7.0"
   dependencies:
     "@babel/runtime" "^7.15.4"
     "resolve-url-loader" "^3.1.4"
@@ -5758,9 +5757,9 @@
     "sharp" "^0.30.7"
 
 "gatsby-plugin-sitemap@^5.15.0":
-  "integrity" "sha512-0MYinO0MTsOIEd7d2NOCm/JVdFIMgoIEFem/S0gMpuW4rBCpsE6McPmRKGZl2bp277jEhU8ACt4/49nsCA1AoA=="
-  "resolved" "https://registry.npmjs.org/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-5.25.0.tgz"
-  "version" "5.25.0"
+  "integrity" "sha512-2G7ooRqwOHe3zItd2WoOVEbqnFBXaQSQ2whxug3LAJr7PbZa33kukRQQcjK6v5IO5HidWAFpP9t1a5LOIeDpCw=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-5.15.0.tgz"
+  "version" "5.15.0"
   dependencies:
     "@babel/runtime" "^7.15.4"
     "common-tags" "^1.8.2"
@@ -5804,17 +5803,17 @@
     "prop-types" "^15.8.1"
 
 "gatsby-remark-copy-linked-files@^5.7.0":
-  "integrity" "sha512-kF068dZ0U920xNrlKM5BIR1MvgFdVvgR281AJfvn1xOvv/ES3elPj2bqlokbcs1f72dYcNnaJhv3UhYoIdV6Fg=="
-  "resolved" "https://registry.npmjs.org/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.25.0.tgz"
-  "version" "5.25.0"
+  "integrity" "sha512-6I7EQCeJBHO9El9PPIAFeWckbW7E5vt/oHEh4FGu/ZtOdUaaBQS8Xmm4zrX2bsoz0S+aWqqi76QPOWM48HVYWQ=="
+  "resolved" "https://registry.npmjs.org/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.7.0.tgz"
+  "version" "5.7.0"
   dependencies:
     "@babel/runtime" "^7.15.4"
     "cheerio" "^1.0.0-rc.10"
-    "fs-extra" "^10.1.0"
+    "fs-extra" "^10.0.0"
     "is-relative-url" "^3.0.0"
     "lodash" "^4.17.21"
     "path-is-inside" "^1.0.2"
-    "probe-image-size" "^7.2.3"
+    "probe-image-size" "^6.0.0"
     "unist-util-visit" "^2.0.3"
 
 "gatsby-remark-images@^6.7.0":
@@ -5845,9 +5844,9 @@
     "unist-util-visit" "^2.0.3"
 
 "gatsby-remark-prismjs@^6.7.0":
-  "integrity" "sha512-O33q0aQjl3X8nVEFboQ0RKtnHLhhb0BU+ErK0D9MA6w4qSDRmDjFIWDY7nrsBP5QR80V1sjbjr4zBAAdOre/dA=="
-  "resolved" "https://registry.npmjs.org/gatsby-remark-prismjs/-/gatsby-remark-prismjs-6.25.0.tgz"
-  "version" "6.25.0"
+  "integrity" "sha512-+ZpB5HYZuQI6rT2b9N2AXi8XQ/Q3sSAeHW1EMJigcaL5syzkVeD9PssKGfvC+1r224xnUBTR/9QkdDcCNqPNMA=="
+  "resolved" "https://registry.npmjs.org/gatsby-remark-prismjs/-/gatsby-remark-prismjs-6.7.0.tgz"
+  "version" "6.7.0"
   dependencies:
     "@babel/runtime" "^7.15.4"
     "parse-numeric-range" "^1.2.0"
@@ -9166,6 +9165,15 @@
   "resolved" "https://registry.npmjs.org/prismjs/-/prismjs-1.27.0.tgz"
   "version" "1.27.0"
 
+"probe-image-size@^6.0.0":
+  "integrity" "sha512-99PZ5+RU4gqiTfK5ZDMDkZtn6eL4WlKfFyVJV7lFQvH3iGmQ85DqMTOdxorERO26LHkevR2qsxnHp0x/2UDJPA=="
+  "resolved" "https://registry.npmjs.org/probe-image-size/-/probe-image-size-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "deepmerge" "^4.0.0"
+    "needle" "^2.5.2"
+    "stream-parser" "~0.3.1"
+
 "probe-image-size@^7.2.3":
   "integrity" "sha512-HubhG4Rb2UH8YtV4ba0Vp5bQ7L78RTONYu/ujmCu5nBI8wGv24s4E9xSKBi0N1MowRpxk76pFCpJtW0KPzOK0w=="
   "resolved" "https://registry.npmjs.org/probe-image-size/-/probe-image-size-7.2.3.tgz"
@@ -9360,7 +9368,7 @@
     "strip-ansi" "^6.0.1"
     "text-table" "^0.2.0"
 
-"react-dom@^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0", "react-dom@^17.0.2", "react-dom@15.x || 16.x || 17.x || 18.x":
+"react-dom@^16.9.0 || ^17.0.0", "react-dom@^16.9.0 || ^17.0.0 || ^18.0.0", "react-dom@^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0", "react-dom@^17.0.2", "react-dom@15.x || 16.x || 17.x || 18.x":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -9418,7 +9426,7 @@
   "resolved" "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.1.tgz"
   "version" "2.1.1"
 
-"react@^16.3.0 || ^17.0.0", "react@^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0", "react@^17.0.2", "react@>=16.3.0", "react@0.0.0-experimental-c8b778b7f-20220825", "react@15.x || 16.x || 17.x || 18.x", "react@17.0.2":
+"react@^16.3.0 || ^17.0.0", "react@^16.9.0 || ^17.0.0", "react@^16.9.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0", "react@^17.0.2", "react@>=16.3.0", "react@0.0.0-experimental-c8b778b7f-20220825", "react@15.x || 16.x || 17.x || 18.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -10017,7 +10025,12 @@
   "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.2.tgz"
   "version" "5.7.2"
 
-"semver@^6.0.0", "semver@^6.2.0", "semver@^6.3.0", "semver@^6.3.1":
+"semver@^6.0.0", "semver@^6.2.0", "semver@^6.3.0":
+  "integrity" "sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw=="
+  "resolved" "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"
+  "version" "6.3.0"
+
+"semver@^6.3.1":
   "integrity" "sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
   "version" "6.3.1"

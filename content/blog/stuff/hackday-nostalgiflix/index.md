@@ -6,8 +6,6 @@ img: './cover.png'
 excerpt: Netflix Fall 2019 Hack Day Winner
 ---
 
-<img class="aligncenter" src="./cover.png" alt="" />
-
 [Netflix Hack
 Day - Fall 2019](https://netflixtechblog.com/netflix-hack-day-november-2019-c9b31d95d134) has now passed and I used this occasion to further my skills with ReactJS, CSS, and Chrome extensions. I also wanted to take this opportunity to apply the My80sTV concept to Netflix :)
 
