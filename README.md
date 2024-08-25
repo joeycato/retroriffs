@@ -21,6 +21,7 @@ npm install -g gatsby-cli
 WARNING: If you're running Node v16 locally, you'l want to install this version instead:
 
 npm install -g gatsby-cli@4.7.0
+
 ## Quick Start 🚀
 
 1.  **Create a Gatsby site.**
@@ -54,3 +55,5 @@ npm install -g gatsby-cli@4.7.0
 ## Special Thanks
 
 This blog was forked from https://github.com/wangonya/flexible-gatsby
+
+Note: Run 'gatsby build" when code is final

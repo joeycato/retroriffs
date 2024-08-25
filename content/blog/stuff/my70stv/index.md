@@ -8,8 +8,8 @@ excerpt: An interactive TV simulator from the 1970's
 
 <img class="aligncenter" src="./cover.png" alt="" />
 
-Following the footsteps of [My80sTV](https://my80stv.com) and [My90sTV](https://my90stv.com), My70sTV is now officially released.
+Following the footsteps of [My80sTV](https://80s.myretrotvs.com/) and [My90sTV](https://90s.myretrotvs.com/), My70sTV is now officially released.
 
 It was pretty fun assembling this as I got a chance to listen through an interesting history of music.
 
-Click [here](https://my70stv.com) to check it out.
+Click [here](https://70s.myretrotvs.com/) to check it out.

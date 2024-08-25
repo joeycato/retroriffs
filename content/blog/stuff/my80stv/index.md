@@ -19,4 +19,4 @@ Recently I added genre filters, and my next goal is to extend them to include da
 
 On the tech side, I used this project as an opportunity to learn more about jQuery and CSS transitions.
 
-Click [here](https://my80stv.com) to check it out.
+Click [here](https://80s.myretrotvs.com/) to check it out.
