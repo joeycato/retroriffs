@@ -2,6 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 import Logo from './joey160.gif'
+import BlueSky from './bluesky.svg';
 
 const Sidebar = ({ siteMetadata }) => (
   <>
@@ -20,17 +21,11 @@ const Sidebar = ({ siteMetadata }) => (
       <footer>
         <section className="contact">
           <h3 className="contact-title">Contact me</h3>
+          
           <ul>
-            {siteMetadata.social.twitter && (
-              <li>
-                <a
-                  href={`https://twitter.com/${siteMetadata.social.twitter}`}
-                  target="_blank"
-                >
-                  <i className="fa fa-twitter" aria-hidden="true" />
-                </a>
-              </li>
-            )}
+            <Link to="https://bsky.app/profile/joeycato.bsky.social">
+              <img src={BlueSky} width={32} height={32} />
+            </Link>
             {siteMetadata.social.facebook && (
               <li>
                 <a

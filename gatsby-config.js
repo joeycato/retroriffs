@@ -5,7 +5,6 @@ module.exports = {
     author: `Joey Cato`,
     siteUrl: `https://joeycato.com`,
     social: {
-      twitter: `joeycato`,
       facebook: ``,
       github: `joeycato`,
       linkedin: `joeycato`,
