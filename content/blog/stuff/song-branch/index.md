@@ -15,7 +15,7 @@ The edges are colorized as a heat map based on the word/phrase frequency. There 
 graph views: The default **Normal** view uses a custom algorithm to display a graph the song lyrics in the fewest nodes
 possible. The **Simple** view displays each song verse as an individual node, whereas the **Detailed** view is a graph of each individual word.  You get interesting results from songs based on how the words are structured and repeated. Here are a few of my favorite findings:
 
-Click [here](https://songbranch.uc.r.appspot.com/) to launch it.
+Click [here](https://songbranch.surge.sh/) to launch it.
 
 <br>
 
