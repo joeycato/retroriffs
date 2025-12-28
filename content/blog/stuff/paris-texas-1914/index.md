@@ -28,7 +28,7 @@ Gazing at <a href="https://www.loc.gov/resource/g4034pm.g4034pm_g086921914/?sp=5
 
 <a href="https://www.georeferencer.com/maps/4df4b519-a3cf-4131-ba92-241d260ce734/view#235563406496" target="_blank"><img class="aligncenter" src="./georef.gif" alt="slider animation" /></a>
 
-You can click <a href="https://www.georeferencer.com/maps/4df4b519-a3cf-4131-ba92-241d260ce734/view#235563406496" target="_blank">here</a> to see the final result. Many of the old street names have changed since long ago and I found it much easier to identify them this way. Plus it was a pretty neat way to see the overall road changes and city expansion across 108 years.
+You can click <a href="https://gorch.com/parisfiremap" target="_blank">here</a> to see the final result. Many of the old street names have changed since long ago and I found it much easier to identify them this way. Plus it was a pretty neat way to see the overall road changes and city expansion across 108 years.
 
 Today there are <a href="https://www.loc.gov/collections/sanborn-maps/" target="_blank">over 35,000 Sanborn insurance maps</a> hosted online at the Library of Congress website. If you're inspired to create your own digital time capsule then you may find your own hometown there as well. This <a href="https://www.loc.gov/collections/sanborn-maps/about-this-collection/" target="_blank">link</a> covers more detail on the Sanborn map collection including additional details on how to read them.
 
