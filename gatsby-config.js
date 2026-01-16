@@ -1,4 +1,5 @@
 module.exports = {
+  trailingSlash: 'always',
   siteMetadata: {
     title: `joey's stuff`,
     description: `I love to build interactive nostalgic things in my spare time. I find it's also a fun way to exercise my passion for continued learning.`,
