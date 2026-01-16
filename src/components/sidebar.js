@@ -3,6 +3,7 @@ import React from 'react'
 
 import Logo from './joey160.gif'
 import BlueSky from './bluesky.svg';
+import BmcLogo from './bmc-logo.svg';
 
 const Sidebar = ({ siteMetadata }) => (
   <>
@@ -36,16 +37,15 @@ const Sidebar = ({ siteMetadata }) => (
                 </a>
               </li>
             )}
-            {siteMetadata.social.github && (
-              <li>
-                <a
-                  href={`https://github.com/${siteMetadata.social.github}`}
-                  target="_blank"
-                >
-                  <i className="fa fa-github" aria-hidden="true" />
-                </a>
-              </li>
-            )}
+            <li>
+              <a
+                href="https://www.buymeacoffee.com/myretrotvs"
+                target="_blank"
+                title="Buy me a coffee"
+              >
+                <img src={BmcLogo} width={32} height={32} alt="Buy Me a Coffee" />
+              </a>
+            </li>
             {siteMetadata.social.linkedin && (
               <li>
                 <a
