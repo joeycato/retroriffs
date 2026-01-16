@@ -93,7 +93,15 @@ module.exports = {
       },
     },
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require('sass'),
+        sassOptions: {
+          silenceDeprecations: ['legacy-js-api'],
+        },
+      },
+    },
     `gatsby-plugin-sitemap`,
   ],
 }
