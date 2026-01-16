@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm run build:*)",
       "Bash(npm install:*)",
-      "Bash(Remove-Item -Recurse -Force .cache -ErrorAction SilentlyContinue)"
+      "Bash(Remove-Item -Recurse -Force .cache -ErrorAction SilentlyContinue)",
+      "Bash(cmd /c \"yarn --version\")",
+      "Bash(powershell:*)"
     ]
   }
 }
