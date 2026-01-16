@@ -14,7 +14,6 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <DefaultLayout>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
         <div className="clearfix post-content-box">
           <article className="article-page">
             <div className="page-content">
@@ -64,6 +63,11 @@ class BlogPostTemplate extends React.Component {
 }
 
 export default BlogPostTemplate
+
+export const Head = ({ data }) => {
+  const post = data.markdownRemark
+  return <SEO title={post.frontmatter.title} description={post.excerpt} />
+}
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

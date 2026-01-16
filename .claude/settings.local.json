@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "Bash(Remove-Item -Recurse -Force .cache -ErrorAction SilentlyContinue)"
+    ]
+  }
+}

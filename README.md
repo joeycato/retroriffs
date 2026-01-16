@@ -59,3 +59,30 @@ mkdir .cache
 This blog was forked from https://github.com/wangonya/flexible-gatsby
 
 Note: Run 'gatsby build" when code is final
+
+## Migration Guide (v4 to v5)
+
+Run these commands in PowerShell manually since the bash environment here has issues with the dependency resolution:
+
+```
+Remove-Item -Recurse -Force node_modules, package-lock.json -ErrorAction SilentlyContinue
+npm install --legacy-peer-deps
+npm run build
+```
+
+The core code changes are complete. The ajv issue is a transient dependency conflict that sometimes happens with Gatsby and should resolve with a clean install without the override.
+
+Alternatively, if the build still fails, we can try using Yarn instead which sometimes handles these dependency conflicts better:
+
+```
+npm install -g yarn
+Remove-Item -Recurse -Force node_modules, package-lock.json -ErrorAction SilentlyContinue
+yarn install
+yarn build
+```
+
+Local dev mode:
+
+```
+yarn develop
+```
