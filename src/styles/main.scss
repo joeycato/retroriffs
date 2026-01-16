@@ -1,6 +1,10 @@
-@import 'normalize';
-@import 'syntax';
-@import 'variables';
+@use 'normalize';
+@use 'syntax';
+@use 'variables' as *;
+@use 'parts/home-page';
+@use 'parts/post-page';
+@use 'parts/tag';
+@use 'media';
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -135,15 +139,3 @@ table tfoot td {
 .clearfix::after {
   clear: both;
 }
-
-/* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
-@import 'parts/home-page';
-
-/* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
-@import 'parts/post-page';
-
-/* - - - - - - - - - - Tag Styles - - - - - - - - - - */
-@import 'parts/tag';
-
-/* - - - - - - - - - - Media Styles - - - - - - - - - - */
-@import 'media';
