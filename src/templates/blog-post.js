@@ -6,8 +6,6 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import DefaultLayout from '../components/layout'
 import SEO from '../components/seo'
 
-import 'katex/dist/katex.min.css'
-
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark

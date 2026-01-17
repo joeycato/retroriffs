@@ -40,12 +40,6 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-katex`,
-            options: {
-              strict: `warn`,
-            },
-          },
-          {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               destinationDir: `files`,
