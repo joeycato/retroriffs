@@ -98,5 +98,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://joeycato.com`,
+        sitemap: `https://joeycato.com/sitemap-index.xml`,
+        policy: [{ userAgent: `*`, allow: `/` }],
+      },
+    },
   ],
 }
