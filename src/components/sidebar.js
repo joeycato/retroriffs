@@ -2,8 +2,10 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 import Logo from './joey160.gif'
-import BlueSky from './bluesky.svg';
-import BmcLogo from './bmc-logo.svg';
+import BlueSky from './bluesky.svg'
+import BmcLogo from './bmc-logo.svg'
+import LinkedInIcon from './linkedin.svg'
+import EnvelopeIcon from './envelope.svg'
 
 const Sidebar = ({ siteMetadata }) => (
   <>
@@ -27,17 +29,7 @@ const Sidebar = ({ siteMetadata }) => (
             <Link to="https://bsky.app/profile/joeycato.bsky.social">
               <img src={BlueSky} width={32} height={32} />
             </Link>
-            {siteMetadata.social.facebook && (
-              <li>
-                <a
-                  href={`https://facebook.com/${siteMetadata.social.facebook}`}
-                  target="_blank"
-                >
-                  <i className="fa fa-facebook" aria-hidden="true" />
-                </a>
-              </li>
-            )}
-            <li>
+                        <li>
               <a
                 href="https://www.buymeacoffee.com/myretrotvs"
                 target="_blank"
@@ -52,14 +44,14 @@ const Sidebar = ({ siteMetadata }) => (
                   href={`https://linkedin.com/in/${siteMetadata.social.linkedin}`}
                   target="_blank"
                 >
-                  <i className="fa fa-linkedin" aria-hidden="true" />
+                  <img src={LinkedInIcon} width={32} height={32} alt="LinkedIn" />
                 </a>
               </li>
             )}
             {siteMetadata.social.email && (
               <li>
                 <a href={`mailto:${siteMetadata.social.email}`} target="_blank">
-                  <i className="fa fa-envelope-o" aria-hidden="true" />
+                  <img src={EnvelopeIcon} width={32} height={32} alt="Email" />
                 </a>
               </li>
             )}
