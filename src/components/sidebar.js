@@ -26,10 +26,15 @@ const Sidebar = ({ siteMetadata }) => (
           <h3 className="contact-title">Contact me</h3>
           
           <ul>
-            <Link to="https://bsky.app/profile/joeycato.bsky.social">
-              <img src={BlueSky} width={32} height={32} />
-            </Link>
-                        <li>
+            <li>
+              <a
+                href="https://bsky.app/profile/joeycato.bsky.social"
+                target="_blank"
+              >
+                <img src={BlueSky} width={32} height={32} alt="BlueSky" />
+              </a>
+            </li>
+            <li>
               <a
                 href="https://www.buymeacoffee.com/myretrotvs"
                 target="_blank"
