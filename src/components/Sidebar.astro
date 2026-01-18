@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import joeyImg from './joey160.gif';
+
 interface Props {
   author: string;
   description: string;
@@ -17,7 +20,7 @@ const currentYear = new Date().getFullYear();
     <div class="about">
       <div class="cover-author-image">
         <a href="/">
-          <img src="/joey160.gif" alt={author} />
+          <Image src={joeyImg} alt={author} />
         </a>
       </div>
       <div class="author-name">{author}</div>

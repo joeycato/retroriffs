@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import partytown from '@astrojs/partytown';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import sirv from 'sirv';
 
@@ -19,6 +20,11 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     sitemap(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
   ],
   vite: {
     css: {
