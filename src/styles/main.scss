@@ -12,12 +12,13 @@
 
 html {
   line-height: 1.5;
+  color-scheme: light dark;
 }
 
 body {
   font-family: 'Lato', sans-serif;
-  color: $body-color;
-  background-color: #fbfbfb;
+  color: var(--text-primary);
+  background-color: var(--bg-body);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,6 +26,11 @@ body {
 
 h1 {
   font-weight: 400;
+  color: var(--text-heading);
+}
+
+a {
+  color: var(--text-link);
 }
 
 img {
@@ -43,11 +49,11 @@ img + em {
 }
 
 blockquote {
-  border-left: 5px solid #000;
+  border-left: 5px solid var(--blockquote-border);
   padding-left: 1.1rem;
   margin-left: 1rem;
   font-style: italic;
-  color: #ada8a8;
+  color: var(--blockquote-text);
 }
 
 pre {
@@ -56,6 +62,8 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
+  background-color: var(--code-bg);
+  border-radius: 4px;
 
   code {
     border: 0;
@@ -65,36 +73,36 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
     word-break: break-all;
+    background: transparent;
   }
 }
 
 table {
-  border: 1px solid #aaa;
-  background-color: #eee;
+  border: 1px solid var(--table-border);
+  background-color: var(--table-bg);
   width: 100%;
   text-align: left;
   border-collapse: collapse;
 }
 table td, table.blueTable th {
-  border: 1px solid #aaa;
+  border: 1px solid var(--table-border);
   padding: 3px 2px;
 }
 table tbody td {
   font-size: 13px;
 }
 table tr:nth-child(even) {
-  background: #adbecc;
+  background: var(--table-row-alt);
 }
 table thead {
-  background: #a9c4d1;
-  background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
-  border-bottom: 1px solid #8c8c8c;
+  background: var(--table-header-bg);
+  border-bottom: 1px solid var(--border-color-strong);
 }
 table thead th {
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
-  border-left: 1px solid #d0e4f5;
+  color: var(--text-heading);
+  border-left: 1px solid var(--border-color);
 }
 table thead th:first-child {
   border-left: none;
@@ -103,10 +111,9 @@ table thead th:first-child {
 table tfoot {
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
-  background: #d0e4f5;
-  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-  border-top: 2px solid #444;
+  color: var(--text-heading);
+  background: var(--bg-surface-alt);
+  border-top: 2px solid var(--border-color-strong);
 }
 table tfoot td {
   font-size: 14px;
@@ -118,16 +125,16 @@ table tfoot td {
 }
 
 .post, .article-page {
-  background-color: #fff;
+  background-color: var(--bg-surface);
 }
 
 ::-moz-selection {
-  background: rgba(38, 57, 89, 0.8);
+  background: var(--selection-bg);
   color: $white;
 }
 
 ::selection {
-  background: rgba(38, 57, 89, 0.8);
+  background: var(--selection-bg);
   color: $white;
 }
 

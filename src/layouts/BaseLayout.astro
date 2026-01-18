@@ -44,6 +44,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Theme initialization (must run before CSS to prevent flash) -->
+    <script is:inline>
+      (function() {
+        const stored = localStorage.getItem('theme-preference');
+        if (stored) {
+          document.documentElement.setAttribute('data-theme', stored);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
     <!-- Google Analytics -->
     <script
       type="text/partytown"
@@ -63,8 +74,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
         position: absolute;
         top: -40px;
         left: 0;
-        background: #000;
-        color: white;
+        background: var(--text-heading);
+        color: var(--bg-body);
         padding: 8px;
         z-index: 100;
         transition: top 0.3s;
