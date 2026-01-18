@@ -17,9 +17,9 @@ This inspired me to apply the same concept to a couple of historic videos taken 
 
 The first [video](https://www.youtube.com/watch?v=lXdI7IZnXVU&t=376s) was recorded by Phil Johnson in 1964. Because he panned the camera around the downtown square, I was able to take advantage of those video frames by extracting them and culling the unnecessary / blurry stills. Then after processing those with Photoshop's _Auto-Align Layers_ and _Auto-Blend Layers_, I ended with this set of nicely generated panoramas:
 
-<img src="parispan64-square-ne.png" style="width: 900px;"/>
-<img src="parispan64-square-e.png" style="width: 900px;"/>
-<img src="parispan64-square-nw.png" style="width: 900px;"/>
+<a href="parispan64-square-ne.png"><img src="parispan64-square-ne.png" style="width: 900px;"/></a>
+<a href="parispan64-square-e.png"><img src="parispan64-square-e.png" style="width: 900px;"/></a>
+<a href="parispan64-square-nw.png"><img src="parispan64-square-nw.png" style="width: 900px;"/></a>
 <br/>
 <br/>
 
@@ -27,7 +27,7 @@ Happy with the results, I decided to repeat the same experiment with another [vi
 
 This time I cranked it up a notch. In addition to generating multiple panoramas I also composited those together to create a super panorama. To accomplish this I relied on Photoshop's _Free Transform_ and _Content Fill_ options to smoothly align and blend the overlapping sections.
 
-<img src="parispan27-square-comp.png" style="width: 900px;"/>
+<a href="parispan27-square-comp.png"><img src="parispan27-square-comp.png" style="width: 900px;"/></a>
 <br/>
 <br/>
 
@@ -35,5 +35,6 @@ I was quite amazed with the results. Seeing the old downtown square in one singl
 
 Here's a colorized version from the same shot:
 
-<img src="parispan27-square-comp-color.jpg" style="width: 900px;"/>
+<a href="parispan27-square-comp-color.jpg"><img src="parispan27-square-comp-color.jpg" style="width: 900px;"/></a>
+
 <br/>
