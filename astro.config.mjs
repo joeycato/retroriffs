@@ -3,6 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import sirv from 'sirv';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // Custom plugin to serve content assets in dev mode
 function serveContentAssets() {
@@ -26,6 +27,17 @@ export default defineConfig({
       },
     }),
   ],
+  markdown: {
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          target: '_blank',
+          rel: ['noopener', 'noreferrer'],
+        },
+      ],
+    ],
+  },
   vite: {
     css: {
       preprocessorOptions: {

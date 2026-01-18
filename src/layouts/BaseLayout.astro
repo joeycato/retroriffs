@@ -23,6 +23,7 @@ const siteMetadata = {
 const { title, description } = Astro.props;
 const pageTitle = title || siteMetadata.title;
 const pageDescription = description || siteMetadata.description;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -30,11 +31,13 @@ const pageDescription = description || siteMetadata.description;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={canonicalURL} />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content={siteMetadata.author} />
     <meta name="twitter:title" content={pageTitle} />
@@ -48,8 +51,24 @@ const pageDescription = description || siteMetadata.description;
       gtag('js', new Date());
       gtag('config', 'G-YQ4YTFYWCR');
     </script>
+<style>
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+</style>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <div class="wrapper">
       <Sidebar
         author={siteMetadata.author}

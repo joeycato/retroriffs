@@ -20,7 +20,7 @@ function formatDate(date: Date): string {
 ---
 
 <BaseLayout>
-  <div class="content-box clearfix">
+  <div id="main-content" class="content-box clearfix">
     {sortedPosts.map((post) => (
       <article class="post">
         {post.data.img && (
