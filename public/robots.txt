@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.joeycato.com/sitemap/sitemap-index.xml
+Sitemap: https://joeycato.com/sitemap-index.xml
 Host: https://joeycato.com

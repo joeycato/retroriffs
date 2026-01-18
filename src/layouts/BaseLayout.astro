@@ -1,32 +1,33 @@
 ---
-import Sidebar from '../components/Sidebar.astro';
-import '../styles/main.scss';
-import '@fontsource/lato';
-import '@fontsource/pt-serif';
+import Sidebar from '../components/Sidebar.astro'
+import '../styles/main.scss'
+import '@fontsource/lato'
+import '@fontsource/pt-serif'
 
 interface Props {
-  title?: string;
-  description?: string;
+  title?: string
+  description?: string
 }
 
 const siteMetadata = {
   title: "joey's stuff",
-  description: "I love to build interactive nostalgic things in my spare time. I find it's also a fun way to exercise my passion for continued learning.",
+  description:
+    "I love to build interactive nostalgic things in my spare time. I find it's also a fun way to exercise my passion for continued learning.",
   author: 'Joey Cato',
   siteUrl: 'https://joeycato.com',
   social: {
     linkedin: 'joeycato',
     email: 'joeycato@gmail.com',
   },
-};
+}
 
-const { title, description } = Astro.props;
-const pageTitle = title || siteMetadata.title;
-const pageDescription = description || siteMetadata.description;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const { title, description } = Astro.props
+const pageTitle = title || siteMetadata.title
+const pageDescription = description || siteMetadata.description
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -44,28 +45,34 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:description" content={pageDescription} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <!-- Google Analytics -->
-    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-YQ4YTFYWCR"></script>
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YQ4YTFYWCR"
+      is:inline></script>
     <script type="text/partytown" is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YQ4YTFYWCR');
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-YQ4YTFYWCR')
     </script>
-<style>
-  .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
-    color: white;
-    padding: 8px;
-    z-index: 100;
-    transition: top 0.3s;
-  }
-  .skip-link:focus {
-    top: 0;
-  }
-</style>
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #000;
+        color: white;
+        padding: 8px;
+        z-index: 100;
+        transition: top 0.3s;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+    </style>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to content</a>

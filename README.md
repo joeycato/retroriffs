@@ -4,11 +4,13 @@
 
 A minimalist Astro blog. Built for Retro Riffs.
 
-![home-page-screenshot](./static/promo-img.jpg)
+## Screenshots
 
-![home-page-screenshot](./static/home-page.jpg)
+![Site texture sample](./public/img/cityplan1914.jpg)
 
-![blog-page-screenshot](./static/post-example.jpg)
+![Avatar](./public/joey160.gif)
+
+![404 page](./public/404.png)
 
 ## Quick Start 🚀
 

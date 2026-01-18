@@ -39,6 +39,7 @@ export default defineConfig({
     ],
   },
   vite: {
+    cacheDir: '.astro/vite',
     css: {
       preprocessorOptions: {
         scss: {
