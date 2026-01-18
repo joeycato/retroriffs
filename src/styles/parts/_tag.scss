@@ -74,3 +74,13 @@
     }
   }
 }
+
+// Standalone tag link class
+a.tag {
+  text-decoration: none;
+  color: $dark-blue;
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+}

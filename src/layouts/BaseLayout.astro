@@ -1,0 +1,64 @@
+---
+import Sidebar from '../components/Sidebar.astro';
+import '../styles/main.scss';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const siteMetadata = {
+  title: "joey's stuff",
+  description: "I love to build interactive nostalgic things in my spare time. I find it's also a fun way to exercise my passion for continued learning.",
+  author: 'Joey Cato',
+  siteUrl: 'https://joeycato.com',
+  social: {
+    linkedin: 'joeycato',
+    email: 'joeycato@gmail.com',
+  },
+};
+
+const { title, description } = Astro.props;
+const pageTitle = title || siteMetadata.title;
+const pageDescription = description || siteMetadata.description;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content={siteMetadata.author} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|PT+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ4YTFYWCR"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YQ4YTFYWCR');
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <Sidebar
+        author={siteMetadata.author}
+        description={siteMetadata.description}
+        social={siteMetadata.social}
+      />
+      <slot />
+    </div>
+  </body>
+</html>

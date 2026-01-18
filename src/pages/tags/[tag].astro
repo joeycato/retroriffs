@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  // Helper function for kebab-case conversion
+  const toKebab = (str: string): string => {
+    return str
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+  };
+
+  // Get all unique tags
+  const tags = new Set<string>();
+  posts.forEach((post) => {
+    if (post.data.tags) {
+      post.data.tags.forEach((tag) => tags.add(tag));
+    }
+  });
+
+  return Array.from(tags).map((tag) => {
+    const filteredPosts = posts.filter(
+      (post) => post.data.tags && post.data.tags.includes(tag)
+    );
+    return {
+      params: { tag: toKebab(tag) },
+      props: { tag, posts: filteredPosts },
+    };
+  });
+}
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit',
+  });
+}
+
+interface Props {
+  tag: string;
+  posts: any[];
+}
+
+const { tag, posts } = Astro.props;
+
+// Sort posts by date descending
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+
+const tagHeader = `${sortedPosts.length} post${sortedPosts.length === 1 ? '' : 's'} tagged with "${tag}"`;
+---
+
+<BaseLayout title={`Posts tagged "${tag}"`}>
+  <div class="content-box clearfix">
+    <div class="blog-tags">
+      <h1>{tagHeader}</h1>
+      <ul class="tag-list">
+        {sortedPosts.map((post) => (
+          <li>
+            <a href={`/stuff/${post.id}/`}>{post.data.title}</a>
+            <small> | {formatDate(post.data.date)}</small>
+          </li>
+        ))}
+      </ul>
+      <span>
+        <a href="/tags/">&larr; All tags</a>
+      </span>
+    </div>
+  </div>
+</BaseLayout>

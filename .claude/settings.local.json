@@ -5,7 +5,10 @@
       "Bash(npm install:*)",
       "Bash(Remove-Item -Recurse -Force .cache -ErrorAction SilentlyContinue)",
       "Bash(cmd /c \"yarn --version\")",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(xargs:*)",
+      "Bash(dir:*)",
+      "Bash(git rm:*)"
     ]
   }
 }

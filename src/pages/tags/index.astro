@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = await getCollection('blog');
+
+// Get all tags with counts
+const tagCounts = new Map<string, number>();
+posts.forEach((post) => {
+  if (post.data.tags) {
+    post.data.tags.forEach((tag) => {
+      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+    });
+  }
+});
+
+// Sort tags alphabetically
+const sortedTags = Array.from(tagCounts.entries()).sort((a, b) =>
+  a[0].localeCompare(b[0])
+);
+
+function kebabCase(str: string): string {
+  return str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+---
+
+<BaseLayout title="Tags">
+  <div class="content-box clearfix">
+    <div class="blog-tags">
+      <h1>Tags</h1>
+      <ul class="tags">
+        {sortedTags.map(([tag, count]) => (
+          <li>
+            <a href={`/tags/${kebabCase(tag)}/`} class="tag">
+              {tag} ({count})
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</BaseLayout>

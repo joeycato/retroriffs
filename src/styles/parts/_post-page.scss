@@ -4,6 +4,11 @@
   padding: 20px 20px 20px 260px;
 }
 
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .wrap-content {
   padding: 20px;
 }
@@ -58,6 +63,20 @@
   .page-image {
     width: 100%;
     height: 100%;
+  }
+}
+
+.post-body {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
