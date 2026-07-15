@@ -2,8 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<BaseLayout title="404: Not Found">
-  <div id="main-content" class="content-box clearfix">
+<BaseLayout
+  title="Page not found"
+  description="The requested page could not be found."
+  robots="noindex, nofollow"
+>
+  <main id="main-content" class="content-box clearfix">
     <h1>That page doesn't exist.</h1>
-  </div>
+  </main>
 </BaseLayout>

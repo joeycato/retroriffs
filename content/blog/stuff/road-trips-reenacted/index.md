@@ -6,7 +6,7 @@ img: ./cover.png
 excerpt: Multi-video synchronization with FFmpeg
 ---
 
-# Multi-Video Synchronization with FFmpeg
+## Multi-Video Synchronization with FFmpeg
 
 [![Synced roadtrip from Paris, Texas](fakethumb.png)](https://www.youtube.com/watch?v=ojo1l0Wf2EI 'Watch Video')
 

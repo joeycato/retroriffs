@@ -17,6 +17,35 @@ type Props = {
 
 const { post } = Astro.props as Props
 const { Content } = await render(post)
+const canonicalURL = new URL(`/stuff/${post.id}/`, Astro.site)
+const pageDescription = `${post.data.title}: ${post.data.excerpt || 'A creative technology project'}. An interactive project by Joey Cato.`
+const socialImage = post.data.img || '/site-icon.png'
+const socialImageURL = new URL(
+  typeof socialImage === 'string' ? socialImage : socialImage.src,
+  Astro.site
+)
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: pageDescription,
+  image: socialImageURL.href,
+  datePublished: post.data.date.toISOString(),
+  ...(post.data.updatedDate && {
+    dateModified: post.data.updatedDate.toISOString(),
+  }),
+  author: {
+    '@type': 'Person',
+    name: 'Joey Cato',
+    url: new URL('/', Astro.site).href,
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalURL.href,
+  },
+  keywords: post.data.tags.join(', '),
+  inLanguage: 'en-US',
+}
 
 function formatDate(date: Date): string {
   return date.toLocaleDateString('en-US', {
@@ -34,15 +63,27 @@ function kebabCase(str: string): string {
 }
 ---
 
-<BaseLayout title={post.data.title} description={post.data.excerpt}>
-  <div id="main-content" class="clearfix post-content-box">
+<BaseLayout
+  title={post.data.title}
+  description={pageDescription}
+  image={socialImage}
+  imageAlt={`${post.data.title} project preview`}
+  type="article"
+  publishedTime={post.data.date}
+  updatedTime={post.data.updatedDate}
+  tags={post.data.tags}
+  structuredData={structuredData}
+>
+  <main id="main-content" class="clearfix post-content-box">
     <article class="article-page">
       <div class="page-content">
         <div class="wrap-content">
           <header class="header-page">
             <h1 class="page-title">{post.data.title}</h1>
             <div class="page-date">
-              <span>{formatDate(post.data.date)}</span>
+              <time datetime={post.data.date.toISOString()}>
+                {formatDate(post.data.date)}
+              </time>
             </div>
           </header>
           <div class="post-body">
@@ -65,5 +106,5 @@ function kebabCase(str: string): string {
         </div>
       </div>
     </article>
-  </div>
+  </main>
 </BaseLayout>

@@ -18,10 +18,44 @@ function formatDate(date: Date): string {
     day: '2-digit',
   })
 }
+
+const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
+const homeDescription =
+  'Interactive web experiments, nostalgic projects, games, data visualizations, and creative technology by Joey Cato.'
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}#person`,
+      name: 'Joey Cato',
+      url: siteUrl,
+      image: new URL('/site-icon.png', siteUrl).href,
+      sameAs: [
+        'https://bsky.app/profile/joeycato.bsky.social',
+        'https://www.linkedin.com/in/joeycato',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}#website`,
+      name: 'Joey Cato',
+      alternateName: "joey's stuff",
+      url: siteUrl,
+      description: homeDescription,
+      author: { '@id': `${siteUrl}#person` },
+      inLanguage: 'en-US',
+    },
+  ],
+}
 ---
 
-<BaseLayout>
-  <div id="main-content" class="content-box clearfix">
+<BaseLayout description={homeDescription} structuredData={structuredData}>
+  <main id="main-content" class="content-box clearfix">
+    <header class="home-intro">
+      <h1>Interactive experiments and nostalgic projects</h1>
+      <p>{homeDescription}</p>
+    </header>
     {
       sortedPosts.map((post) => (
         <article class="post">
@@ -29,7 +63,7 @@ function formatDate(date: Date): string {
             <a href={`/stuff/${post.id}/`} class="post-thumbnail">
               <Image
                 src={post.data.img}
-                alt=""
+                alt={`${post.data.title} project preview`}
                 class="page-image"
                 widths={[400, 800]}
                 sizes="(max-width: 768px) 100vw, 30vw"
@@ -41,10 +75,12 @@ function formatDate(date: Date): string {
               <a href={`/stuff/${post.id}/`}>{post.data.title}</a>
             </h2>
             {post.data.excerpt && <p>{post.data.excerpt}</p>}
-            <span class="post-date">{formatDate(post.data.date)}</span>
+            <time class="post-date" datetime={post.data.date.toISOString()}>
+              {formatDate(post.data.date)}
+            </time>
           </div>
         </article>
       ))
     }
-  </div>
+  </main>
 </BaseLayout>

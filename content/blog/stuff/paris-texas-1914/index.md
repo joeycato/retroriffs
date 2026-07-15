@@ -8,7 +8,7 @@ excerpt: Georeferencing century-old fire insurance maps
 
 <img class="aligncenter" src="./logo.png" alt="" />
 
-# Georeferencing Century-Old Fire Insurance Maps
+## Georeferencing Century-Old Fire Insurance Maps
 
 So recently I discovered these <a href="https://www.loc.gov/resource/g4034pm.g4034pm_g086921914/?st=gallery" target="_blank">old fire insurance maps</a> from 1914 of my hometown of Paris, Texas.
 

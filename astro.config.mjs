@@ -21,7 +21,9 @@ export default defineConfig({
   site: 'https://joeycato.com',
   trailingSlash: 'always',
   integrations: [
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes('/tags/'),
+    }),
     partytown({
       config: {
         forward: ['dataLayer.push'],

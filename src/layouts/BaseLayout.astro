@@ -4,15 +4,29 @@ import '../styles/main.scss'
 import '@fontsource/lato'
 import '@fontsource/pt-serif'
 
+interface SocialImageMetadata {
+  src: string
+  width: number
+  height: number
+}
+
 interface Props {
   title?: string
   description?: string
+  image?: SocialImageMetadata | string
+  imageAlt?: string
+  type?: 'website' | 'article'
+  publishedTime?: Date
+  updatedTime?: Date
+  tags?: string[]
+  robots?: string
+  structuredData?: Record<string, unknown>
 }
 
 const siteMetadata = {
-  title: "joey's stuff",
+  title: 'Joey Cato — Interactive Experiments & Nostalgic Projects',
   description:
-    "I love to build interactive nostalgic things in my spare time. I find it's also a fun way to exercise my passion for continued learning.",
+    'Interactive web experiments, nostalgic projects, games, data visualizations, and creative technology by Joey Cato.',
   author: 'Joey Cato',
   siteUrl: 'https://joeycato.com',
   social: {
@@ -21,10 +35,32 @@ const siteMetadata = {
   },
 }
 
-const { title, description } = Astro.props
-const pageTitle = title || siteMetadata.title
+const {
+  title,
+  description,
+  image,
+  imageAlt,
+  type = 'website',
+  publishedTime,
+  updatedTime,
+  tags = [],
+  robots = 'index, follow',
+  structuredData,
+} = Astro.props as Props
+const pageTitle = title
+  ? `${title} | ${siteMetadata.author}`
+  : siteMetadata.title
 const pageDescription = description || siteMetadata.description
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const socialImage = image
+  ? new URL(typeof image === 'string' ? image : image.src, Astro.site)
+  : new URL('/site-icon.png', Astro.site)
+const socialImageWidth = typeof image === 'object' ? image.width : undefined
+const socialImageHeight = typeof image === 'object' ? image.height : undefined
+const socialImageAlt = imageAlt || `${siteMetadata.author}'s creative projects`
+const structuredDataJson = structuredData
+  ? JSON.stringify(structuredData).replace(/</g, '\\u003c')
+  : undefined
 ---
 
 <!doctype html>
@@ -35,14 +71,62 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
     <link rel="canonical" href={canonicalURL} />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
+    <meta name="author" content={siteMetadata.author} />
+    <meta name="robots" content={robots} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content={siteMetadata.author} />
+    <meta property="og:site_name" content={siteMetadata.author} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    {
+      socialImageWidth && (
+        <meta property="og:image:width" content={String(socialImageWidth)} />
+      )
+    }
+    {
+      socialImageHeight && (
+        <meta property="og:image:height" content={String(socialImageHeight)} />
+      )
+    }
+    {
+      type === 'article' && publishedTime && (
+        <meta
+          property="article:published_time"
+          content={publishedTime.toISOString()}
+        />
+      )
+    }
+    {
+      type === 'article' && updatedTime && (
+        <meta
+          property="article:modified_time"
+          content={updatedTime.toISOString()}
+        />
+      )
+    }
+    {
+      type === 'article' && (
+        <meta property="article:author" content={siteMetadata.author} />
+      )
+    }
+    {tags.map((tag) => <meta property="article:tag" content={tag} />)}
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
+    {
+      structuredDataJson && (
+        <script
+          type="application/ld+json"
+          set:html={structuredDataJson}
+          is:inline
+        />
+      )
+    }
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <!-- Theme initialization (must run before CSS to prevent flash) -->
     <script is:inline>
