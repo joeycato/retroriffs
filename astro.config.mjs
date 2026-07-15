@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
+import { unified } from '@astrojs/markdown-remark';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import sirv from 'sirv';
 import rehypeExternalLinks from 'rehype-external-links';
@@ -28,15 +29,17 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    rehypePlugins: [
-      [
-        rehypeExternalLinks,
-        {
-          target: '_blank',
-          rel: ['noopener', 'noreferrer'],
-        },
+    processor: unified({
+      rehypePlugins: [
+        [
+          rehypeExternalLinks,
+          {
+            target: '_blank',
+            rel: ['noopener', 'noreferrer'],
+          },
+        ],
       ],
-    ],
+    }),
   },
   vite: {
     cacheDir: '.astro/vite',

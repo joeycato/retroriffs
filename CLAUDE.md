@@ -16,7 +16,7 @@ npm run clean     # Remove dist, node_modules, .astro
 
 ## Architecture
 
-This is an Astro 5 static blog site for joeycato.com.
+This is an Astro 7 static blog site for joeycato.com.
 
 ### Content Structure
 
