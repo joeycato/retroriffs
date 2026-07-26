@@ -49,5 +49,8 @@
     "format": "prettier --plugin=prettier-plugin-astro --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.astro\" \"src/**/*.ts\"",
     "lint": "prettier --plugin=prettier-plugin-astro --trailing-comma es5 --no-semi --single-quote --check \"src/**/*.astro\" \"src/**/*.ts\"",
     "check": "cross-env VITE_CACHE_DIR=.astro/vite astro check"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
   }
 }
