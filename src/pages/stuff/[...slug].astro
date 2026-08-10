@@ -64,7 +64,7 @@ function kebabCase(str: string): string {
 ---
 
 <BaseLayout
-  title={post.data.title}
+  title={post.data.seoTitle || post.data.title}
   description={pageDescription}
   image={socialImage}
   imageAlt={`${post.data.title} project preview`}
