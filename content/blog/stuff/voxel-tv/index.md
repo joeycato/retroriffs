@@ -4,7 +4,7 @@ seoTitle: 'VoxelTV — Interactive 3D Voxel Music Video Sculptures'
 tags: [video, 3d, music, nostalgia]
 date: 2026-08-09
 img: './voxeltv-sweet-dreams.png'
-excerpt: 'VoxelTV transforms classic music videos into interactive 3D voxel sculptures.'
+excerpt: 'Transforms classic music videos into interactive 3D voxel sculptures.'
 ---
 
 <img class="aligncenter" src="./voxeltv-sweet-dreams.png" alt="A music-video frame rendered as a colourful 3D voxel sculpture" />
