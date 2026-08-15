@@ -2,6 +2,7 @@
 title: Say Whaaat!!!
 tags: [netflix, hackday]
 date: 2015-03-09
+priority: 69
 img: './saywhat.png'
 excerpt: Netflix Fall 2019 Hack Day Winner
 ---

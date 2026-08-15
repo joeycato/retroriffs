@@ -2,6 +2,7 @@
 title: Soundtrack Streamer
 tags: [netflix, hackday, extension]
 date: 2018-11-10
+priority: 79
 img: './soundtrackstreamer.png'
 excerpt: Netflix Fall 2018 Hack Day Submission
 ---

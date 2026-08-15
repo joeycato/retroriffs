@@ -2,6 +2,7 @@
 title: Face Portal iPhone App
 tags: [ios, video, swift]
 date: 2021-01-28
+priority: 84
 img: ./faceportalapp.png
 excerpt: A magic portal for your face
 ---

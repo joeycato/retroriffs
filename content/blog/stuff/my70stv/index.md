@@ -2,6 +2,7 @@
 title: My 70's TV
 tags: [nostalgia]
 date: 2014-06-08
+priority: 68
 img: ./cover.png
 excerpt: An interactive TV simulator from the 1970's
 ---

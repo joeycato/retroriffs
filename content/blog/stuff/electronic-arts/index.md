@@ -2,6 +2,7 @@
 title: Electronic Arts
 tags: [ea, thesims, gamedev]
 date: 2014-03-10
+priority: 67
 img: ./thesims.png
 excerpt: My career at Electronic Arts
 ---

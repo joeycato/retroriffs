@@ -2,6 +2,7 @@
 title: Paris in 1981
 tags: [nostalgia]
 date: 2016-02-13
+priority: 72
 img: ./paristx1981.jpg
 excerpt: Digitizing an old phone book
 ---

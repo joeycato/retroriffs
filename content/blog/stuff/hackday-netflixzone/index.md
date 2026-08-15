@@ -2,6 +2,7 @@
 title: Netflix Zone (VR Prototype)
 tags: [netflix, hackday, vr, unity]
 date: 2016-05-24
+priority: 74
 img: './cover.png'
 excerpt: Netflix Spring 2016 Hack Day Winner
 ---

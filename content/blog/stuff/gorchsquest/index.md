@@ -2,6 +2,7 @@
 title: Gorch's Quest
 tags: [gamedev, c++, 3d]
 date: 2000-06-09
+priority: 61
 img: ./gqlogo.png
 excerpt: 2D tile-based space adventure game
 ---

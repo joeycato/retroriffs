@@ -2,6 +2,7 @@
 title: 'TikTok Fave Save'
 tags: [ai, tiktok]
 date: 2025-01-12
+priority: 99
 img: './favesavelogo.png'
 excerpt: A mass video downloader for your exported TikTok profile data
 ---

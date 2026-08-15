@@ -2,6 +2,7 @@
 title: Deep Nostalgia with Movie Posters
 tags: [ai, video, photoshop]
 date: 2021-03-09
+priority: 87
 path: stuff/deep-nostalgia-with-movie-posters
 img: ./cover.png
 excerpt: Animating classic movie posters

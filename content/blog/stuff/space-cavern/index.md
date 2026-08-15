@@ -2,6 +2,7 @@
 title: Space Cavern
 tags: [gamedev]
 date: 2012-12-20
+priority: 63
 img: ./spacecavern.jpg
 excerpt: An HTML5 cave exploration game
 ---

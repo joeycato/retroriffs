@@ -2,6 +2,7 @@
 title: My 90's TV
 tags: [nostalgia]
 date: 2014-01-12
+priority: 66
 img: ./tv90_400.jpg
 excerpt: An interactive TV simulator from the 1990's
 ---

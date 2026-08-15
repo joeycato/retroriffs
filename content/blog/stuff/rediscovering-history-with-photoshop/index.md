@@ -2,6 +2,7 @@
 title: Rediscovering History with Photoshop
 tags: [video, photoshop, panoramas]
 date: 2021-02-07
+priority: 85
 path: stuff/rediscovering-history-with-photoshop
 img: ./parispan64-square-ne.png
 excerpt: Generating panoramas from old videos

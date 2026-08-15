@@ -2,6 +2,7 @@
 title: PacPeeps
 tags: [gamedev]
 date: 2015-03-25
+priority: 70
 img: ./pacpeeps.png
 excerpt: Pacman parallelized!
 ---

@@ -2,6 +2,7 @@
 title: Bandersnatch Demo
 tags: [gamedev]
 date: 2018-12-31
+priority: 80
 img: ./bandersnatchdemo.png
 excerpt: Reverse-engineering Bandersnatch
 ---

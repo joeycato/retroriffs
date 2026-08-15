@@ -2,6 +2,7 @@
 title: Circle of Life
 tags: [d3js, dataviz, sparql]
 date: 2020-11-20
+priority: 83
 img: ./logo.png
 excerpt: Tinkering with D3JS and SPARQL
 ---

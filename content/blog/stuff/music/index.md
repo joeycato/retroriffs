@@ -2,6 +2,7 @@
 title: 'The Zone'
 tags: [ai, music]
 date: 2024-08-01
+priority: 98
 img: './the-zone.webp'
 excerpt: Wrote a new song recently
 ---

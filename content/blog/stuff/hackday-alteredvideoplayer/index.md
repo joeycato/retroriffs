@@ -2,6 +2,7 @@
 title: Altered Video Player
 tags: [netflix, hackday, gamedev, video]
 date: 2018-03-13
+priority: 77
 img: ./avplogov.png
 excerpt: Netflix Winter 2018 Hack Day Submission
 ---

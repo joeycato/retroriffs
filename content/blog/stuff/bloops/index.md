@@ -2,6 +2,7 @@
 title: Bloops 3D
 tags: [gamedev, 3d]
 date: 2022-08-21
+priority: 94
 img: './bloops.png'
 excerpt: From Flash to ThreeJS in 13 Years
 ---

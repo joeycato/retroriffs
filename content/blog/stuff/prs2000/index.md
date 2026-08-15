@@ -2,6 +2,7 @@
 title: Paper Rock Scissors 2000
 tags: [gamedev, c++, networking]
 date: 2000-07-15
+priority: 62
 img: ./prs.png
 excerpt: tile-based strategy game
 ---

@@ -2,6 +2,7 @@
 title: Netflix Backdrop (AI)
 tags: [ai, netflix, hackday, video]
 date: 2021-02-22
+priority: 86
 img: './backdropstill.png'
 excerpt: Netflix Winter 2021 Hack Day Submission
 ---

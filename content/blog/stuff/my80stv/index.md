@@ -2,6 +2,7 @@
 title: My 80's TV
 tags: [nostalgia]
 date: 2013-09-15
+priority: 65
 img: ./tv80_400.jpg
 excerpt: An interactive TV simulator from the 1980's
 ---

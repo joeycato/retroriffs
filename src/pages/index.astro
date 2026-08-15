@@ -6,18 +6,10 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 
 const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
 
-// Sort posts by date descending
+// Higher priority posts appear first.
 const sortedPosts = [...posts].sort(
-  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+  (a, b) => b.data.priority - a.data.priority || a.id.localeCompare(b.id)
 )
-
-function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: '2-digit',
-  })
-}
 
 const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
 const homeDescription =
@@ -75,9 +67,6 @@ const structuredData = {
               <a href={`/stuff/${post.id}/`}>{post.data.title}</a>
             </h2>
             {post.data.excerpt && <p>{post.data.excerpt}</p>}
-            <time class="post-date" datetime={post.data.date.toISOString()}>
-              {formatDate(post.data.date)}
-            </time>
           </div>
         </article>
       ))

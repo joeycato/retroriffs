@@ -2,6 +2,7 @@
 title: RickRollFX
 tags: [nostalgia]
 date: 2021-04-11
+priority: 88
 img: ./rickrollfx.png
 excerpt: I have no idea why I made this but it was fun
 ---

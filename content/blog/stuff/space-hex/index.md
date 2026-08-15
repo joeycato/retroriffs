@@ -2,6 +2,7 @@
 title: Space Hex
 tags: [gamedev]
 date: 2013-01-21
+priority: 64
 img: ./spacehex.jpg
 excerpt: An HTML5 hexagon-based puzzle game
 ---

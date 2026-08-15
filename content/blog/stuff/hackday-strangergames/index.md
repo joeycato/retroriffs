@@ -2,6 +2,7 @@
 title: Stranger Games
 tags: [netflix, hackday, gamedev]
 date: 2017-02-03
+priority: 75
 img: './cover.png'
 excerpt: Netflix Winter 2017 Hack Day Winner
 ---

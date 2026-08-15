@@ -2,6 +2,7 @@
 title: Song Branch
 tags: [dataviz, music]
 date: 2016-03-08
+priority: 73
 img: ./sbsq.png
 excerpt: Interactive song lyric visualization
 ---

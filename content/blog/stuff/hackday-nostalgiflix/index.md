@@ -2,6 +2,7 @@
 title: Nostalgiflix
 tags: [netflix, hackday, vr]
 date: 2019-11-08
+priority: 81
 img: './cover.png'
 excerpt: Netflix Fall 2019 Hack Day Winner
 ---

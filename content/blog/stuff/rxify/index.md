@@ -2,6 +2,7 @@
 title: rxify
 tags: [rxjs]
 date: 2015-12-30
+priority: 71
 img: ./cover.jpg
 excerpt: Visualize your observables in ASCII
 ---

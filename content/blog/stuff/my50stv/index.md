@@ -2,6 +2,7 @@
 title: My 50's TV
 tags: [nostalgia]
 date: 2023-02-20
+priority: 97
 img: ./tv50s.png
 excerpt: Relive the channel-surfing past of the 1950's
 ---

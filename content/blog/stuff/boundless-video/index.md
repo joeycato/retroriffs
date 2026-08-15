@@ -2,6 +2,7 @@
 title: Boundless Video
 tags: [video, 3d]
 date: 2020-03-29
+priority: 82
 img: ./bvplogo.png
 excerpt: Slit-scan project
 ---

@@ -2,6 +2,7 @@
 title: Road Trips Reenacted
 tags: [video, ffmpeg]
 date: 2018-06-01
+priority: 78
 img: ./cover.png
 excerpt: Multi-video synchronization with FFmpeg
 ---

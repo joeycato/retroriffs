@@ -2,6 +2,7 @@
 title: My 60's TV
 tags: [nostalgia]
 date: 2021-08-19
+priority: 91
 img: ./tv60s_382.jpg
 excerpt: Relive the channel-surfing past of the 1960's
 ---

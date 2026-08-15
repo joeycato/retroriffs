@@ -2,6 +2,7 @@
 title: Netflix Interactive
 tags: [netflix, interactive, gamedev]
 date: 2022-11-08
+priority: 95
 img: ./ixlogo.png
 excerpt: My time on Netflix's Interactive Experiences team
 ---

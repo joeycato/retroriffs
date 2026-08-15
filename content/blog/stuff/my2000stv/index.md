@@ -2,6 +2,7 @@
 title: My 2000's TV
 tags: [nostalgia]
 date: 2021-05-27
+priority: 89
 img: ./tv00_400.jpg
 excerpt: An interactive TV simulator from the 2000's
 ---

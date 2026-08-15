@@ -2,6 +2,7 @@
 title: Subtitle Reactions
 tags: [netflix, hackday, extension]
 date: 2017-08-31
+priority: 76
 img: './cover.png'
 excerpt: Netflix Summer 2017 Hack Day Submission
 ---
