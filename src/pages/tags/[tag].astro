@@ -45,6 +45,22 @@ const sortedPosts = [...posts].sort(
   (a, b) => b.data.priority - a.data.priority || a.id.localeCompare(b.id)
 )
 
+const consolidatedProjectUrls: Record<string, string> = {
+  my50stv: '/stuff/my-retro-tvs/#1950s',
+  my60stv: '/stuff/my-retro-tvs/#1960s',
+  my70stv: '/stuff/my-retro-tvs/#1970s',
+  my80stv: '/stuff/my-retro-tvs/#1980s',
+  my90stv: '/stuff/my-retro-tvs/#1990s',
+  my2000stv: '/stuff/my-retro-tvs/#2000s',
+  'boundless-video': '/stuff/video-experiments/#boundless-video',
+  woymfx: '/stuff/video-experiments/#whats-on-your-mind-fx',
+  rickrollfx: '/stuff/video-experiments/#rickrollfx',
+}
+
+function projectUrl(postId: string): string {
+  return consolidatedProjectUrls[postId] || `/stuff/${postId}/`
+}
+
 const tagHeader = `${sortedPosts.length} post${sortedPosts.length === 1 ? '' : 's'} tagged with "${tag}"`
 ---
 
@@ -60,7 +76,7 @@ const tagHeader = `${sortedPosts.length} post${sortedPosts.length === 1 ? '' : '
         {
           sortedPosts.map((post) => (
             <li>
-              <a href={`/stuff/${post.id}/`}>{post.data.title}</a>
+              <a href={projectUrl(post.id)}>{post.data.title}</a>
             </li>
           ))
         }
