@@ -104,20 +104,20 @@ const structuredData = {
             <h1 class="page-title">{pageTitle}</h1>
             <p>{pageDescription}</p>
           </header>
-          <nav class="decade-selector" aria-label="Choose a decade">
+          <nav class="collection-selector" aria-label="Choose a decade">
             {
               decadeDetails.map((decade) => (
                 <a href={`#${decade.id}`}>{decade.years}</a>
               ))
             }
           </nav>
-          <div class="retro-tv-list">
+          <div class="showcase-list">
             {
               decadeDetails.map(
                 (decade) =>
                   decade.post && (
-                    <section class="retro-tv-section" id={decade.id}>
-                      <a class="retro-tv-image" href={decade.url}>
+                    <section class="showcase-section" id={decade.id}>
+                      <a class="showcase-image" href={decade.url}>
                         {decade.post.data.img && (
                           <Image
                             src={decade.post.data.img}
@@ -127,13 +127,13 @@ const structuredData = {
                           />
                         )}
                       </a>
-                      <div class="retro-tv-content">
+                      <div class="showcase-content">
                         <div class="collection-meta">
                           Launched {decade.post.data.date.getFullYear()}
                         </div>
                         <h2>{decade.label}</h2>
                         <p>{decade.description}</p>
-                        <a class="retro-tv-launch" href={decade.url}>
+                        <a class="showcase-launch" href={decade.url}>
                           Watch {decade.years} TV{' '}
                           <span aria-hidden="true">→</span>
                         </a>

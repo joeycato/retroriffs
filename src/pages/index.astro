@@ -17,9 +17,21 @@ const retroTvIds = new Set([
   'my2000stv',
 ])
 const retroTvPosts = posts.filter((post) => retroTvIds.has(post.id))
+const gameIds = new Set([
+  'gorchsquest',
+  'prs2000',
+  'space-cavern',
+  'space-hex',
+  'pacpeeps',
+  'bloops',
+])
+const gamePosts = posts.filter((post) => gameIds.has(post.id))
 const sortedPosts = posts
   .filter(
-    (post) => !post.data.tags.includes('hackday') && !retroTvIds.has(post.id)
+    (post) =>
+      !post.data.tags.includes('hackday') &&
+      !retroTvIds.has(post.id) &&
+      !gameIds.has(post.id)
   )
   .sort((a, b) => b.data.priority - a.data.priority || a.id.localeCompare(b.id))
 const hackDayCover = hackDayPosts.find(
@@ -27,6 +39,7 @@ const hackDayCover = hackDayPosts.find(
 )?.data.img
 const retroTvCover = retroTvPosts.find((post) => post.id === 'my80stv')?.data
   .img
+const gamesCover = gamePosts.find((post) => post.id === 'bloops')?.data.img
 
 const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
 const homeDescription =
@@ -84,6 +97,27 @@ const structuredData = {
           <a href="/stuff/netflix-hack-days/">Netflix Hack Days</a>
         </h2>
         <p>Submissions I created for Netflix Hack Day over the years</p>
+      </div>
+    </article>
+    <article class="post collection-post">
+      {
+        gamesCover && (
+          <a href="/stuff/games/" class="post-thumbnail">
+            <Image
+              src={gamesCover}
+              alt="Games collection preview"
+              class="page-image"
+              widths={[400, 800]}
+              sizes="(max-width: 768px) 100vw, 30vw"
+            />
+          </a>
+        )
+      }
+      <div class="post-content">
+        <h2 class="post-title">
+          <a href="/stuff/games/">Games</a>
+        </h2>
+        <p>Games and playful experiments I've created over the years</p>
       </div>
     </article>
     <article class="post collection-post">

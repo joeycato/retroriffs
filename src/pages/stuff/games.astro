@@ -1,0 +1,155 @@
+---
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
+const postById = new Map(posts.map((post) => [post.id, post]))
+
+const gameDetails = [
+  {
+    id: 'gorchs-quest',
+    postId: 'gorchsquest',
+    label: "Gorch's Quest",
+    genre: 'Space adventure',
+    url: 'https://gorch.com/games/gq/',
+    description:
+      'A tile-based space adventure inspired by The Legend of Zelda. Explore a sabotaged planetary defense system and recover five crystals to save the planet.',
+  },
+  {
+    id: 'paper-rock-scissors-2000',
+    postId: 'prs2000',
+    label: 'Paper Rock Scissors 2000',
+    genre: 'Strategy game',
+    url: 'https://gorch.com/games/prs/',
+    description:
+      'A turn-based tile strategy game that expands the familiar paper-rock-scissors rules with board control, computer opponents, networking, and special pieces.',
+  },
+  {
+    id: 'space-cavern',
+    postId: 'space-cavern',
+    label: 'Space Cavern',
+    genre: 'Action platformer',
+    url: 'https://gorch.com/html5/spacecavern/',
+    description:
+      'A challenging retro-style HTML5 platformer where you pilot a rocket through a cavern filled with hazards and obstacles.',
+  },
+  {
+    id: 'space-hex',
+    postId: 'space-hex',
+    label: 'Space Hex',
+    genre: 'Puzzle game',
+    url: 'https://www.gorch.com/games/spacehex/',
+    description:
+      'Rotate hexagonal rooms to open paths through each level, allowing Gorch to navigate the maze and collect every orb.',
+  },
+  {
+    id: 'pacpeeps',
+    postId: 'pacpeeps',
+    label: 'PacPeeps',
+    genre: 'Arcade experiment',
+    url: 'https://gorch.com/pacpeeps',
+    description:
+      'A parallelized Pac-Man challenge: one set of controls moves through four mazes simultaneously, and every dot must be cleared to win.',
+  },
+  {
+    id: 'bloops-3d',
+    postId: 'bloops',
+    label: 'Bloops 3D',
+    genre: '3D puzzle game',
+    url: 'https://gorch.com/bloops/',
+    description:
+      'A modern Three.js remake of an unreleased 2009 Flash puzzle game, rebuilt in 3D with nine levels to solve.',
+  },
+]
+  .map((game) => ({ ...game, post: postById.get(game.postId) }))
+  .sort(
+    (a, b) =>
+      (b.post?.data.priority ?? 0) - (a.post?.data.priority ?? 0) ||
+      a.label.localeCompare(b.label)
+  )
+
+const pageTitle = 'Games'
+const pageDescription =
+  'A collection of games and playful experiments created by Joey Cato, from early Windows projects to HTML5 and Three.js.'
+const socialImage = postById.get('bloops')?.data.img
+const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: pageTitle,
+  description: pageDescription,
+  url: new URL('/stuff/games/', siteUrl).href,
+  author: {
+    '@type': 'Person',
+    name: 'Joey Cato',
+    url: siteUrl,
+  },
+  hasPart: gameDetails.map((game) => ({
+    '@type': 'VideoGame',
+    name: game.label,
+    url: game.url,
+    description: game.description,
+  })),
+}
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={socialImage}
+  imageAlt="Games created by Joey Cato"
+  structuredData={structuredData}
+>
+  <main id="main-content" class="clearfix post-content-box">
+    <article class="article-page collection-page games-page">
+      <div class="page-content">
+        <div class="wrap-content">
+          <header class="header-page collection-header">
+            <h1 class="page-title">{pageTitle}</h1>
+            <p>{pageDescription}</p>
+          </header>
+          <nav class="collection-selector" aria-label="Choose a game">
+            {
+              gameDetails.map((game) => (
+                <a href={`#${game.id}`}>{game.label}</a>
+              ))
+            }
+          </nav>
+          <div class="showcase-list">
+            {
+              gameDetails.map(
+                (game) =>
+                  game.post && (
+                    <section class="showcase-section" id={game.id}>
+                      <a class="showcase-image" href={game.url}>
+                        {game.post.data.img && (
+                          <Image
+                            src={game.post.data.img}
+                            alt={`${game.label} game preview`}
+                            widths={[400, 800]}
+                            sizes="(max-width: 700px) 100vw, 400px"
+                          />
+                        )}
+                      </a>
+                      <div class="showcase-content">
+                        <div class="collection-meta">
+                          {game.genre} · {game.post.data.date.getFullYear()}
+                        </div>
+                        <h2>{game.label}</h2>
+                        <p>{game.description}</p>
+                        <a class="showcase-launch" href={game.url}>
+                          Play game <span aria-hidden="true">→</span>
+                        </a>
+                      </div>
+                    </section>
+                  )
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</BaseLayout>

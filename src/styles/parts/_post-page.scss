@@ -204,7 +204,7 @@
   }
 }
 
-.decade-selector {
+.collection-selector {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -225,13 +225,13 @@
   }
 }
 
-.retro-tv-list {
+.showcase-list {
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
 
-.retro-tv-section {
+.showcase-section {
   display: grid;
   grid-template-columns: minmax(240px, 42%) 1fr;
   scroll-margin-top: 20px;
@@ -243,13 +243,13 @@
   &:nth-child(even) {
     grid-template-columns: 1fr minmax(240px, 42%);
 
-    .retro-tv-image {
+    .showcase-image {
       order: 2;
     }
   }
 }
 
-.retro-tv-image {
+.showcase-image {
   display: block;
   min-height: 250px;
   overflow: hidden;
@@ -261,7 +261,7 @@
   }
 }
 
-.retro-tv-content {
+.showcase-content {
   align-self: center;
   padding: 28px;
 
@@ -278,23 +278,23 @@
   }
 }
 
-.retro-tv-launch {
+.showcase-launch {
   display: inline-block;
   font-weight: 700;
   text-decoration: none;
 }
 
 @media only screen and (max-width: 700px) {
-  .retro-tv-section,
-  .retro-tv-section:nth-child(even) {
+  .showcase-section,
+  .showcase-section:nth-child(even) {
     grid-template-columns: 1fr;
 
-    .retro-tv-image {
+    .showcase-image {
       order: 0;
     }
   }
 
-  .retro-tv-image {
+  .showcase-image {
     min-height: 0;
     aspect-ratio: 16 / 9;
   }
