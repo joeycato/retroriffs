@@ -5,10 +5,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 
 export async function getStaticPaths() {
   const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: { post },
-  }))
+  const consolidatedRetroTvIds = new Set([
+    'my50stv',
+    'my60stv',
+    'my70stv',
+    'my80stv',
+    'my90stv',
+    'my2000stv',
+  ])
+
+  return posts
+    .filter((post) => !consolidatedRetroTvIds.has(post.id))
+    .map((post) => ({
+      params: { slug: post.id },
+      props: { post },
+    }))
 }
 
 type Props = {

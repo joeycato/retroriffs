@@ -8,12 +8,25 @@ const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
 
 // Hack Day projects are collected on a dedicated overview page.
 const hackDayPosts = posts.filter((post) => post.data.tags.includes('hackday'))
+const retroTvIds = new Set([
+  'my50stv',
+  'my60stv',
+  'my70stv',
+  'my80stv',
+  'my90stv',
+  'my2000stv',
+])
+const retroTvPosts = posts.filter((post) => retroTvIds.has(post.id))
 const sortedPosts = posts
-  .filter((post) => !post.data.tags.includes('hackday'))
+  .filter(
+    (post) => !post.data.tags.includes('hackday') && !retroTvIds.has(post.id)
+  )
   .sort((a, b) => b.data.priority - a.data.priority || a.id.localeCompare(b.id))
 const hackDayCover = hackDayPosts.find(
   (post) => post.id === 'hackday-videoviews'
 )?.data.img
+const retroTvCover = retroTvPosts.find((post) => post.id === 'my80stv')?.data
+  .img
 
 const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
 const homeDescription =
@@ -71,6 +84,27 @@ const structuredData = {
           <a href="/stuff/netflix-hack-days/">Netflix Hack Days</a>
         </h2>
         <p>Submissions I created for Netflix Hack Day over the years</p>
+      </div>
+    </article>
+    <article class="post collection-post">
+      {
+        retroTvCover && (
+          <a href="/stuff/my-retro-tvs/" class="post-thumbnail">
+            <Image
+              src={retroTvCover}
+              alt="My Retro TVs collection preview"
+              class="page-image"
+              widths={[400, 800]}
+              sizes="(max-width: 768px) 100vw, 30vw"
+            />
+          </a>
+        )
+      }
+      <div class="post-content">
+        <h2 class="post-title">
+          <a href="/stuff/my-retro-tvs/">My Retro TVs</a>
+        </h2>
+        <p>Channel-surf through six decades of television history</p>
       </div>
     </article>
     {

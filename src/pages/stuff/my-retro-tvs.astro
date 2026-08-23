@@ -1,0 +1,150 @@
+---
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
+const postById = new Map(posts.map((post) => [post.id, post]))
+
+const decadeDetails = [
+  {
+    id: '1950s',
+    postId: 'my50stv',
+    label: "My 50's TV",
+    years: "1950's",
+    url: 'https://50s.myretrotvs.com/',
+    description:
+      "The final installment of My Retro TVs, released in 2023—a decade after the original My 80's TV began the project.",
+  },
+  {
+    id: '1960s',
+    postId: 'my60stv',
+    label: "My 60's TV",
+    years: "1960's",
+    url: 'https://60s.myretrotvs.com/',
+    description:
+      'An interactive set with clickable dials and knobs for moving through the channels and settings in either direction.',
+  },
+  {
+    id: '1970s',
+    postId: 'my70stv',
+    label: "My 70's TV",
+    years: "1970's",
+    url: 'https://70s.myretrotvs.com/',
+    description:
+      'A tour through the television and music of the seventies, following the original eighties and nineties editions.',
+  },
+  {
+    id: '1980s',
+    postId: 'my80stv',
+    label: "My 80's TV",
+    years: "1980's",
+    url: 'https://80s.myretrotvs.com/',
+    description:
+      'The original experiment: randomized channels and starting times recreate the feeling of channel-surfing in the eighties.',
+  },
+  {
+    id: '1990s',
+    postId: 'my90stv',
+    label: "My 90's TV",
+    years: "1990's",
+    url: 'https://90s.myretrotvs.com/',
+    description:
+      'A larger follow-up with an extensively curated video database, with every clip manually checked and tagged by year.',
+  },
+  {
+    id: '2000s',
+    postId: 'my2000stv',
+    label: "My 2000's TV",
+    years: "2000's",
+    url: 'https://00s.myretrotvs.com/',
+    description:
+      'The first new decade in seven years, built after the shared codebase was rewritten with modern, modular JavaScript.',
+  },
+].map((decade) => ({ ...decade, post: postById.get(decade.postId) }))
+
+const pageTitle = 'My Retro TVs'
+const pageDescription =
+  'Channel-surf through television history with interactive TV simulators spanning the 1950s through the 2000s.'
+const socialImage = postById.get('my80stv')?.data.img
+const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: pageTitle,
+  description: pageDescription,
+  url: new URL('/stuff/my-retro-tvs/', siteUrl).href,
+  author: {
+    '@type': 'Person',
+    name: 'Joey Cato',
+    url: siteUrl,
+  },
+  hasPart: decadeDetails.map((decade) => ({
+    '@type': 'WebApplication',
+    name: decade.label,
+    url: decade.url,
+    description: decade.description,
+  })),
+}
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={socialImage}
+  imageAlt="My Retro TVs interactive television collection"
+  structuredData={structuredData}
+>
+  <main id="main-content" class="clearfix post-content-box">
+    <article class="article-page collection-page retro-tvs-page">
+      <div class="page-content">
+        <div class="wrap-content">
+          <header class="header-page collection-header">
+            <h1 class="page-title">{pageTitle}</h1>
+            <p>{pageDescription}</p>
+          </header>
+          <nav class="decade-selector" aria-label="Choose a decade">
+            {
+              decadeDetails.map((decade) => (
+                <a href={`#${decade.id}`}>{decade.years}</a>
+              ))
+            }
+          </nav>
+          <div class="retro-tv-list">
+            {
+              decadeDetails.map(
+                (decade) =>
+                  decade.post && (
+                    <section class="retro-tv-section" id={decade.id}>
+                      <a class="retro-tv-image" href={decade.url}>
+                        {decade.post.data.img && (
+                          <Image
+                            src={decade.post.data.img}
+                            alt={`${decade.label} interactive TV simulator`}
+                            widths={[400, 800]}
+                            sizes="(max-width: 700px) 100vw, 400px"
+                          />
+                        )}
+                      </a>
+                      <div class="retro-tv-content">
+                        <div class="collection-meta">
+                          Launched {decade.post.data.date.getFullYear()}
+                        </div>
+                        <h2>{decade.label}</h2>
+                        <p>{decade.description}</p>
+                        <a class="retro-tv-launch" href={decade.url}>
+                          Watch {decade.years} TV{' '}
+                          <span aria-hidden="true">→</span>
+                        </a>
+                      </div>
+                    </section>
+                  )
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</BaseLayout>

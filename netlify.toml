@@ -3,3 +3,39 @@
   command = "npm run build"
 [build.environment]
   NODE_VERSION = "24"
+
+[[redirects]]
+  from = "/stuff/my50stv/*"
+  to = "/stuff/my-retro-tvs/#1950s"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stuff/my60stv/*"
+  to = "/stuff/my-retro-tvs/#1960s"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stuff/my70stv/*"
+  to = "/stuff/my-retro-tvs/#1970s"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stuff/my80stv/*"
+  to = "/stuff/my-retro-tvs/#1980s"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stuff/my90stv/*"
+  to = "/stuff/my-retro-tvs/#1990s"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stuff/my2000stv/*"
+  to = "/stuff/my-retro-tvs/#2000s"
+  status = 301
+  force = true
