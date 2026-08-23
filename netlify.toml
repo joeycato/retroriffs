@@ -75,3 +75,21 @@
   to = "/stuff/games/#bloops-3d"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/stuff/boundless-video/*"
+  to = "/stuff/video-experiments/#boundless-video"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stuff/woymfx/*"
+  to = "/stuff/video-experiments/#whats-on-your-mind-fx"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stuff/rickrollfx/*"
+  to = "/stuff/video-experiments/#rickrollfx"
+  status = 301
+  force = true

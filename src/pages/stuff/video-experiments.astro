@@ -1,0 +1,129 @@
+---
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
+const postById = new Map(posts.map((post) => [post.id, post]))
+
+const experimentDetails = [
+  {
+    id: 'boundless-video',
+    postId: 'boundless-video',
+    label: 'Boundless Video',
+    type: 'Slit-scan video player',
+    url: 'https://bvp.surge.sh/',
+    description:
+      'A web-based video player that samples the edge pixels of each frame in real time and projects them outward to create a three-dimensional slit-scan effect.',
+  },
+  {
+    id: 'whats-on-your-mind-fx',
+    postId: 'woymfx',
+    label: 'WhatsOnYourMindFX',
+    type: 'Interactive music video',
+    url: 'https://woym.surge.sh/',
+    description:
+      "An interactive visual-effects treatment of Information Society's “What's on Your Mind,” created as a new variation of the RickRollFX experiment.",
+  },
+  {
+    id: 'rickrollfx',
+    postId: 'rickrollfx',
+    label: 'RickRollFX',
+    type: 'Interactive music video',
+    url: 'https://rickrollfx.surge.sh/',
+    description:
+      'A playful interactive effects experience built around the internet’s most enduring musical bait-and-switch.',
+  },
+].map((experiment) => ({
+  ...experiment,
+  post: postById.get(experiment.postId),
+}))
+
+const pageTitle = 'Video Experiments'
+const pageDescription =
+  'Interactive video projects by Joey Cato that transform music videos with real-time visual effects.'
+const socialImage = postById.get('boundless-video')?.data.img
+const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: pageTitle,
+  description: pageDescription,
+  url: new URL('/stuff/video-experiments/', siteUrl).href,
+  author: {
+    '@type': 'Person',
+    name: 'Joey Cato',
+    url: siteUrl,
+  },
+  hasPart: experimentDetails.map((experiment) => ({
+    '@type': 'CreativeWork',
+    name: experiment.label,
+    url: experiment.url,
+    description: experiment.description,
+  })),
+}
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={socialImage}
+  imageAlt="Boundless Video and interactive video experiments"
+  structuredData={structuredData}
+>
+  <main id="main-content" class="clearfix post-content-box">
+    <article class="article-page collection-page video-experiments-page">
+      <div class="page-content">
+        <div class="wrap-content">
+          <header class="header-page collection-header">
+            <h1 class="page-title">{pageTitle}</h1>
+            <p>{pageDescription}</p>
+          </header>
+          <nav
+            class="collection-selector"
+            aria-label="Choose a video experiment"
+          >
+            {
+              experimentDetails.map((experiment) => (
+                <a href={`#${experiment.id}`}>{experiment.label}</a>
+              ))
+            }
+          </nav>
+          <div class="showcase-list">
+            {
+              experimentDetails.map(
+                (experiment) =>
+                  experiment.post && (
+                    <section class="showcase-section" id={experiment.id}>
+                      <a class="showcase-image" href={experiment.url}>
+                        {experiment.post.data.img && (
+                          <Image
+                            src={experiment.post.data.img}
+                            alt={`${experiment.label} preview`}
+                            widths={[400, 800]}
+                            sizes="(max-width: 700px) 100vw, 400px"
+                          />
+                        )}
+                      </a>
+                      <div class="showcase-content">
+                        <div class="collection-meta">
+                          {experiment.type} ·{' '}
+                          {experiment.post.data.date.getFullYear()}
+                        </div>
+                        <h2>{experiment.label}</h2>
+                        <p>{experiment.description}</p>
+                        <a class="showcase-launch" href={experiment.url}>
+                          Launch experiment <span aria-hidden="true">→</span>
+                        </a>
+                      </div>
+                    </section>
+                  )
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</BaseLayout>

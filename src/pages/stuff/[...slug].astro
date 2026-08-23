@@ -21,12 +21,18 @@ export async function getStaticPaths() {
     'pacpeeps',
     'bloops',
   ])
+  const consolidatedVideoExperimentIds = new Set([
+    'boundless-video',
+    'woymfx',
+    'rickrollfx',
+  ])
 
   return posts
     .filter(
       (post) =>
         !consolidatedRetroTvIds.has(post.id) &&
-        !consolidatedGameIds.has(post.id)
+        !consolidatedGameIds.has(post.id) &&
+        !consolidatedVideoExperimentIds.has(post.id)
     )
     .map((post) => ({
       params: { slug: post.id },
