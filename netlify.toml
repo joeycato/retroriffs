@@ -41,42 +41,6 @@
   force = true
 
 [[redirects]]
-  from = "/stuff/gorchsquest/*"
-  to = "/stuff/games/#gorchs-quest"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/stuff/prs2000/*"
-  to = "/stuff/games/#paper-rock-scissors-2000"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/stuff/space-cavern/*"
-  to = "/stuff/games/#space-cavern"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/stuff/space-hex/*"
-  to = "/stuff/games/#space-hex"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/stuff/pacpeeps/*"
-  to = "/stuff/games/#pacpeeps"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/stuff/bloops/*"
-  to = "/stuff/games/#bloops-3d"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/stuff/boundless-video/*"
   to = "/stuff/video-experiments/#boundless-video"
   status = 301
@@ -91,5 +55,11 @@
 [[redirects]]
   from = "/stuff/rickrollfx/*"
   to = "/stuff/video-experiments/#rickrollfx"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stuff/nostalgic-splurges/*"
+  to = "/stuff/nostalgic-deep-dives/"
   status = 301
   force = true

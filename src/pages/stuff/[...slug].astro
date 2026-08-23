@@ -13,25 +13,15 @@ export async function getStaticPaths() {
     'my90stv',
     'my2000stv',
   ])
-  const consolidatedGameIds = new Set([
-    'gorchsquest',
-    'prs2000',
-    'space-cavern',
-    'space-hex',
-    'pacpeeps',
-    'bloops',
-  ])
   const consolidatedVideoExperimentIds = new Set([
     'boundless-video',
     'woymfx',
     'rickrollfx',
   ])
-
   return posts
     .filter(
       (post) =>
         !consolidatedRetroTvIds.has(post.id) &&
-        !consolidatedGameIds.has(post.id) &&
         !consolidatedVideoExperimentIds.has(post.id)
     )
     .map((post) => ({

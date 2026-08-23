@@ -14,6 +14,7 @@ const experimentDetails = [
     label: 'Boundless Video',
     type: 'Slit-scan video player',
     url: 'https://bvp.surge.sh/',
+    sourceUrl: 'https://github.com/joeycato/boundlessvideoplayer',
     description:
       'A web-based video player that samples the edge pixels of each frame in real time and projects them outward to create a three-dimensional slit-scan effect.',
   },
@@ -23,6 +24,7 @@ const experimentDetails = [
     label: 'WhatsOnYourMindFX',
     type: 'Interactive music video',
     url: 'https://woym.surge.sh/',
+    sourceUrl: null,
     description:
       "An interactive visual-effects treatment of Information Society's “What's on Your Mind,” created as a new variation of the RickRollFX experiment.",
   },
@@ -32,6 +34,7 @@ const experimentDetails = [
     label: 'RickRollFX',
     type: 'Interactive music video',
     url: 'https://rickrollfx.surge.sh/',
+    sourceUrl: null,
     description:
       'A playful interactive effects experience built around the internet’s most enduring musical bait-and-switch.',
   },
@@ -113,9 +116,19 @@ const structuredData = {
                         </div>
                         <h2>{experiment.label}</h2>
                         <p>{experiment.description}</p>
-                        <a class="showcase-launch" href={experiment.url}>
-                          Launch experiment <span aria-hidden="true">→</span>
-                        </a>
+                        <div class="showcase-actions">
+                          <a class="showcase-launch" href={experiment.url}>
+                            Launch experiment <span aria-hidden="true">↗</span>
+                          </a>
+                          {experiment.sourceUrl && (
+                            <a
+                              class="showcase-launch"
+                              href={experiment.sourceUrl}
+                            >
+                              View source <span aria-hidden="true">↗</span>
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </section>
                   )

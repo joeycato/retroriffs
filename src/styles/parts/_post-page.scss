@@ -270,6 +270,10 @@
     font-family: 'PT Serif', serif;
     font-size: 28px;
     font-weight: 400;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   p {
@@ -282,6 +286,12 @@
   display: inline-block;
   font-weight: 700;
   text-decoration: none;
+}
+
+.showcase-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
 }
 
 @media only screen and (max-width: 700px) {

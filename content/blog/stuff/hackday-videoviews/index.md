@@ -2,7 +2,7 @@
 title: Netflix Video Views
 tags: [netflix, hackday, video, 3d]
 date: 2022-03-10
-priority: 92
+priority: 106
 img: './covervv.png'
 excerpt: Netflix Winter 2022 Hack Day Submission
 ---

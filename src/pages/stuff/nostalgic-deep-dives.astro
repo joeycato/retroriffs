@@ -1,0 +1,194 @@
+---
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
+const postById = new Map(posts.map((post) => [post.id, post]))
+
+const deepDiveDetails = [
+  {
+    id: 'paris-before-the-fire',
+    postId: 'paris-texas-1914',
+    label: 'Paris, Texas — Before the Fire',
+    type: 'Interactive history map',
+    url: 'https://gorch.com/parisfiremap',
+    action: 'Explore the map',
+    description:
+      'Century-old Sanborn fire-insurance maps stitched together and georeferenced to reveal Paris, Texas, shortly before the devastating fire of 1916.',
+  },
+  {
+    id: 'deep-nostalgia-movie-posters',
+    postId: 'deep-nostalgia-with-movie-posters',
+    label: 'Deep Nostalgia with Movie Posters',
+    type: 'AI animation experiment',
+    url: null,
+    action: null,
+    description:
+      'Classic eighties and nineties movie posters animated with deep-learning tools, then composited back into their original frames with Photoshop.',
+  },
+  {
+    id: 'rediscovering-history',
+    postId: 'rediscovering-history-with-photoshop',
+    label: 'Rediscovering History with Photoshop',
+    type: 'Historic panoramas',
+    url: null,
+    action: null,
+    description:
+      'Panoramic views of downtown Paris reconstructed from panning shots in historic films recorded in 1927 and 1964.',
+  },
+  {
+    id: 'circle-of-life',
+    postId: 'circle-of-life',
+    label: 'Circle of Life',
+    type: 'Interactive data visualization',
+    url: 'https://circleoflife.surge.sh/',
+    action: 'Explore the timeline',
+    description:
+      'A circular timeline comparing the ages and lifespans of past Academy Award winners using Wikidata, SPARQL, D3, and HTML canvas.',
+  },
+  {
+    id: 'bandersnatch-demo',
+    postId: 'bandersnatch-demo',
+    label: 'Bandersnatch Demo',
+    type: 'Interactive recreation',
+    url: 'https://bandersnatchdemo.surge.sh/',
+    action: 'Try the prototype',
+    description:
+      'A playable HTML5 Canvas recreation of the fictional early-eighties computer game at the center of Netflix’s Bandersnatch.',
+  },
+  {
+    id: 'road-trips-reenacted',
+    postId: 'road-trips-reenacted',
+    label: 'Road Trips Reenacted',
+    type: 'Then-and-now video',
+    url: 'https://www.youtube.com/watch?v=ojo1l0Wf2EI',
+    action: 'Watch the video',
+    description:
+      'Camcorder journeys through Paris, Texas, from 2003 recreated fifteen years later and synchronized into a split-screen comparison with FFmpeg.',
+  },
+  {
+    id: 'paris-in-1981',
+    postId: 'paris-in-1981',
+    label: 'Paris in 1981',
+    type: 'Interactive local history',
+    url: 'https://paris1981.surge.sh/',
+    action: 'Explore Paris in 1981',
+    description:
+      'A digitized Paris, Texas, telephone directory transformed into an interactive snapshot of local people, businesses, and places in 1981.',
+  },
+]
+  .map((deepDive) => ({
+    ...deepDive,
+    post: postById.get(deepDive.postId),
+  }))
+  .sort(
+    (a, b) =>
+      (b.post?.data.priority ?? 0) - (a.post?.data.priority ?? 0) ||
+      a.label.localeCompare(b.label)
+  )
+
+const pageTitle = 'Nostalgic Deep Dives'
+const pageDescription =
+  'Experiments by Joey Cato that revisit personal, local, and pop-culture history through maps, video, photography, data, and interactive media.'
+const socialImage = postById.get('paris-texas-1914')?.data.img
+const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: pageTitle,
+  description: pageDescription,
+  url: new URL('/stuff/nostalgic-deep-dives/', siteUrl).href,
+  author: {
+    '@type': 'Person',
+    name: 'Joey Cato',
+    url: siteUrl,
+  },
+  hasPart: deepDiveDetails.map((deepDive) => ({
+    '@type': 'CreativeWork',
+    name: deepDive.label,
+    url: new URL(`/stuff/${deepDive.postId}/`, siteUrl).href,
+    description: deepDive.description,
+  })),
+}
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={socialImage}
+  imageAlt="Nostalgic Deep Dives project collection"
+  structuredData={structuredData}
+>
+  <main id="main-content" class="clearfix post-content-box">
+    <article class="article-page collection-page nostalgic-deep-dives-page">
+      <div class="page-content">
+        <div class="wrap-content">
+          <header class="header-page collection-header">
+            <h1 class="page-title">{pageTitle}</h1>
+            <p>{pageDescription}</p>
+          </header>
+          <nav class="collection-selector" aria-label="Choose a project">
+            {
+              deepDiveDetails.map((deepDive) => (
+                <a href={`#${deepDive.id}`}>{deepDive.label}</a>
+              ))
+            }
+          </nav>
+          <div class="showcase-list">
+            {
+              deepDiveDetails.map(
+                (deepDive) =>
+                  deepDive.post && (
+                    <section class="showcase-section" id={deepDive.id}>
+                      <a
+                        class="showcase-image"
+                        href={`/stuff/${deepDive.postId}/`}
+                      >
+                        {deepDive.post.data.img && (
+                          <Image
+                            src={deepDive.post.data.img}
+                            alt={`${deepDive.label} preview`}
+                            widths={[400, 800]}
+                            sizes="(max-width: 700px) 100vw, 400px"
+                          />
+                        )}
+                      </a>
+                      <div class="showcase-content">
+                        <div class="collection-meta">
+                          {deepDive.type} ·{' '}
+                          {deepDive.post.data.date.getFullYear()}
+                        </div>
+                        <h2>
+                          <a href={`/stuff/${deepDive.postId}/`}>
+                            {deepDive.label}
+                          </a>
+                        </h2>
+                        <p>{deepDive.description}</p>
+                        <div class="showcase-actions">
+                          <a
+                            class="showcase-launch"
+                            href={`/stuff/${deepDive.postId}/`}
+                          >
+                            Read the full project{' '}
+                            <span aria-hidden="true">→</span>
+                          </a>
+                          {deepDive.url && deepDive.action && (
+                            <a class="showcase-launch" href={deepDive.url}>
+                              {deepDive.action}{' '}
+                              <span aria-hidden="true">↗</span>
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </section>
+                  )
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</BaseLayout>

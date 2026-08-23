@@ -2,7 +2,7 @@
 title: AI Music Videos
 tags: [ai, music, stablediffusion, deforum]
 date: 2022-11-12
-priority: 96
+priority: 104
 img: './quest-still.jpg'
 excerpt: Music videos generated with Stable Diffusion
 ---

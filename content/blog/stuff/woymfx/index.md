@@ -2,7 +2,7 @@
 title: WhatsOnYourMindFX
 tags: [nostalgia]
 date: 2021-07-25
-priority: 90
+priority: 103
 img: ./woymlogo.png
 excerpt: Interactive demo based on Information Society's "What's On Your Mind"
 ---

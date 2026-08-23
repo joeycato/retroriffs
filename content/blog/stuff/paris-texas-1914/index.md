@@ -2,7 +2,7 @@
 title: Paris, Texas - Before the Fire
 tags: [nostalgia]
 date: 2022-06-04
-priority: 93
+priority: 101
 img: ./logo.png
 excerpt: Georeferencing century-old fire insurance maps
 ---

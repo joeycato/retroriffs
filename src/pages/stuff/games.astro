@@ -89,7 +89,8 @@ const structuredData = {
   hasPart: gameDetails.map((game) => ({
     '@type': 'VideoGame',
     name: game.label,
-    url: game.url,
+    url: new URL(`/stuff/${game.postId}/`, siteUrl).href,
+    sameAs: game.url,
     description: game.description,
   })),
 }
@@ -123,7 +124,7 @@ const structuredData = {
                 (game) =>
                   game.post && (
                     <section class="showcase-section" id={game.id}>
-                      <a class="showcase-image" href={game.url}>
+                      <a class="showcase-image" href={`/stuff/${game.postId}/`}>
                         {game.post.data.img && (
                           <Image
                             src={game.post.data.img}
@@ -137,11 +138,22 @@ const structuredData = {
                         <div class="collection-meta">
                           {game.genre} · {game.post.data.date.getFullYear()}
                         </div>
-                        <h2>{game.label}</h2>
+                        <h2>
+                          <a href={`/stuff/${game.postId}/`}>{game.label}</a>
+                        </h2>
                         <p>{game.description}</p>
-                        <a class="showcase-launch" href={game.url}>
-                          Play game <span aria-hidden="true">→</span>
-                        </a>
+                        <div class="showcase-actions">
+                          <a
+                            class="showcase-launch"
+                            href={`/stuff/${game.postId}/`}
+                          >
+                            Read the full project{' '}
+                            <span aria-hidden="true">→</span>
+                          </a>
+                          <a class="showcase-launch" href={game.url}>
+                            Play game <span aria-hidden="true">↗</span>
+                          </a>
+                        </div>
                       </div>
                     </section>
                   )

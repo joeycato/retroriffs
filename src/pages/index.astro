@@ -30,15 +30,18 @@ const videoExperimentIds = new Set(['boundless-video', 'woymfx', 'rickrollfx'])
 const videoExperimentPosts = posts.filter((post) =>
   videoExperimentIds.has(post.id)
 )
-const sortedPosts = posts
-  .filter(
-    (post) =>
-      !post.data.tags.includes('hackday') &&
-      !retroTvIds.has(post.id) &&
-      !gameIds.has(post.id) &&
-      !videoExperimentIds.has(post.id)
-  )
-  .sort((a, b) => b.data.priority - a.data.priority || a.id.localeCompare(b.id))
+const nostalgicDeepDiveIds = new Set([
+  'paris-texas-1914',
+  'deep-nostalgia-with-movie-posters',
+  'rediscovering-history-with-photoshop',
+  'circle-of-life',
+  'bandersnatch-demo',
+  'road-trips-reenacted',
+  'paris-in-1981',
+])
+const nostalgicDeepDivePosts = posts.filter((post) =>
+  nostalgicDeepDiveIds.has(post.id)
+)
 const hackDayCover = hackDayPosts.find(
   (post) => post.id === 'hackday-videoviews'
 )?.data.img
@@ -48,6 +51,80 @@ const gamesCover = gamePosts.find((post) => post.id === 'bloops')?.data.img
 const videoExperimentsCover = videoExperimentPosts.find(
   (post) => post.id === 'boundless-video'
 )?.data.img
+const nostalgicDeepDivesCover = nostalgicDeepDivePosts.find(
+  (post) => post.id === 'paris-texas-1914'
+)?.data.img
+
+function highestPriority(collectionPosts: CollectionEntry<'blog'>[]): number {
+  return Math.max(...collectionPosts.map((post) => post.data.priority), 0)
+}
+
+const collectionItems = [
+  {
+    id: 'netflix-hack-days',
+    title: 'Netflix Hack Days',
+    excerpt: 'Submissions I created for Netflix Hack Day over the years',
+    href: '/stuff/netflix-hack-days/',
+    img: hackDayCover,
+    priority: highestPriority(hackDayPosts),
+  },
+  {
+    id: 'my-retro-tvs',
+    title: 'My Retro TVs',
+    excerpt: 'Channel-surf through six decades of television history',
+    href: '/stuff/my-retro-tvs/',
+    img: retroTvCover,
+    priority: highestPriority(retroTvPosts),
+  },
+  {
+    id: 'games',
+    title: 'Games',
+    excerpt: "Games and playful experiments I've created over the years",
+    href: '/stuff/games/',
+    img: gamesCover,
+    priority: highestPriority(gamePosts),
+  },
+  {
+    id: 'video-experiments',
+    title: 'Video Experiments',
+    excerpt: 'Interactive effects that transform music videos in real time',
+    href: '/stuff/video-experiments/',
+    img: videoExperimentsCover,
+    priority: highestPriority(videoExperimentPosts),
+  },
+  {
+    id: 'nostalgic-deep-dives',
+    title: 'Nostalgic Deep Dives',
+    excerpt:
+      'Experiments that revisit personal, local, and pop-culture history',
+    href: '/stuff/nostalgic-deep-dives/',
+    img: nostalgicDeepDivesCover,
+    priority: highestPriority(nostalgicDeepDivePosts),
+  },
+].map((item) => ({ ...item, isCollection: true }))
+
+const standaloneItems = posts
+  .filter(
+    (post) =>
+      !post.data.tags.includes('hackday') &&
+      !retroTvIds.has(post.id) &&
+      !gameIds.has(post.id) &&
+      !videoExperimentIds.has(post.id) &&
+      !nostalgicDeepDiveIds.has(post.id)
+  )
+  .map((post) => ({
+    id: post.id,
+    title: post.data.title,
+    excerpt: post.data.excerpt,
+    href: `/stuff/${post.id}/`,
+    img: post.data.img,
+    priority: post.data.priority,
+    isCollection: false,
+  }))
+
+const homeItems = [...collectionItems, ...standaloneItems].sort(
+  (a, b) => b.priority - a.priority || a.id.localeCompare(b.id)
+)
 
 const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
 const homeDescription =
@@ -86,98 +163,14 @@ const structuredData = {
       <h1>Stuff I've made</h1>
       <p>{homeDescription}</p>
     </header>
-    <article class="post collection-post">
-      {
-        hackDayCover && (
-          <a href="/stuff/netflix-hack-days/" class="post-thumbnail">
-            <Image
-              src={hackDayCover}
-              alt="Netflix Hack Days project collection preview"
-              class="page-image"
-              widths={[400, 800]}
-              sizes="(max-width: 768px) 100vw, 30vw"
-            />
-          </a>
-        )
-      }
-      <div class="post-content">
-        <h2 class="post-title">
-          <a href="/stuff/netflix-hack-days/">Netflix Hack Days</a>
-        </h2>
-        <p>Submissions I created for Netflix Hack Day over the years</p>
-      </div>
-    </article>
-    <article class="post collection-post">
-      {
-        videoExperimentsCover && (
-          <a href="/stuff/video-experiments/" class="post-thumbnail">
-            <Image
-              src={videoExperimentsCover}
-              alt="Video Experiments collection preview"
-              class="page-image"
-              widths={[400, 800]}
-              sizes="(max-width: 768px) 100vw, 30vw"
-            />
-          </a>
-        )
-      }
-      <div class="post-content">
-        <h2 class="post-title">
-          <a href="/stuff/video-experiments/">Video Experiments</a>
-        </h2>
-        <p>Interactive effects that transform music videos in real time</p>
-      </div>
-    </article>
-    <article class="post collection-post">
-      {
-        gamesCover && (
-          <a href="/stuff/games/" class="post-thumbnail">
-            <Image
-              src={gamesCover}
-              alt="Games collection preview"
-              class="page-image"
-              widths={[400, 800]}
-              sizes="(max-width: 768px) 100vw, 30vw"
-            />
-          </a>
-        )
-      }
-      <div class="post-content">
-        <h2 class="post-title">
-          <a href="/stuff/games/">Games</a>
-        </h2>
-        <p>Games and playful experiments I've created over the years</p>
-      </div>
-    </article>
-    <article class="post collection-post">
-      {
-        retroTvCover && (
-          <a href="/stuff/my-retro-tvs/" class="post-thumbnail">
-            <Image
-              src={retroTvCover}
-              alt="My Retro TVs collection preview"
-              class="page-image"
-              widths={[400, 800]}
-              sizes="(max-width: 768px) 100vw, 30vw"
-            />
-          </a>
-        )
-      }
-      <div class="post-content">
-        <h2 class="post-title">
-          <a href="/stuff/my-retro-tvs/">My Retro TVs</a>
-        </h2>
-        <p>Channel-surf through six decades of television history</p>
-      </div>
-    </article>
     {
-      sortedPosts.map((post) => (
-        <article class="post">
-          {post.data.img && (
-            <a href={`/stuff/${post.id}/`} class="post-thumbnail">
+      homeItems.map((item) => (
+        <article class:list={['post', item.isCollection && 'collection-post']}>
+          {item.img && (
+            <a href={item.href} class="post-thumbnail">
               <Image
-                src={post.data.img}
-                alt={`${post.data.title} project preview`}
+                src={item.img}
+                alt={`${item.title} ${item.isCollection ? 'collection' : 'project'} preview`}
                 class="page-image"
                 widths={[400, 800]}
                 sizes="(max-width: 768px) 100vw, 30vw"
@@ -186,9 +179,9 @@ const structuredData = {
           )}
           <div class="post-content">
             <h2 class="post-title">
-              <a href={`/stuff/${post.id}/`}>{post.data.title}</a>
+              <a href={item.href}>{item.title}</a>
             </h2>
-            {post.data.excerpt && <p>{post.data.excerpt}</p>}
+            {item.excerpt && <p>{item.excerpt}</p>}
           </div>
         </article>
       ))
