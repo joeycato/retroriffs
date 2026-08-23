@@ -6,10 +6,14 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 
 const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
 
-// Higher priority posts appear first.
-const sortedPosts = [...posts].sort(
-  (a, b) => b.data.priority - a.data.priority || a.id.localeCompare(b.id)
-)
+// Hack Day projects are collected on a dedicated overview page.
+const hackDayPosts = posts.filter((post) => post.data.tags.includes('hackday'))
+const sortedPosts = posts
+  .filter((post) => !post.data.tags.includes('hackday'))
+  .sort((a, b) => b.data.priority - a.data.priority || a.id.localeCompare(b.id))
+const hackDayCover = hackDayPosts.find(
+  (post) => post.id === 'hackday-videoviews'
+)?.data.img
 
 const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
 const homeDescription =
@@ -48,6 +52,27 @@ const structuredData = {
       <h1>Stuff I've made</h1>
       <p>{homeDescription}</p>
     </header>
+    <article class="post collection-post">
+      {
+        hackDayCover && (
+          <a href="/stuff/netflix-hack-days/" class="post-thumbnail">
+            <Image
+              src={hackDayCover}
+              alt="Netflix Hack Days project collection preview"
+              class="page-image"
+              widths={[400, 800]}
+              sizes="(max-width: 768px) 100vw, 30vw"
+            />
+          </a>
+        )
+      }
+      <div class="post-content">
+        <h2 class="post-title">
+          <a href="/stuff/netflix-hack-days/">Netflix Hack Days</a>
+        </h2>
+        <p>Submissions I created for Netflix Hack Day over the years</p>
+      </div>
+    </article>
     {
       sortedPosts.map((post) => (
         <article class="post">

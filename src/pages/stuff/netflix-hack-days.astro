@@ -1,0 +1,93 @@
+---
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
+const hackDayPosts = posts
+  .filter((post) => post.data.tags.includes('hackday'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+
+const pageTitle = 'Netflix Hack Days'
+const pageDescription =
+  'A collection of experiments Joey Cato created with teammates at Netflix Hack Days, from playback ideas and browser extensions to games, VR, and AI.'
+const socialImage = hackDayPosts.find(
+  (post) => post.id === 'hackday-videoviews'
+)?.data.img
+const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: pageTitle,
+  description: pageDescription,
+  url: new URL('/stuff/netflix-hack-days/', siteUrl).href,
+  author: {
+    '@type': 'Person',
+    name: 'Joey Cato',
+    url: siteUrl,
+  },
+  hasPart: hackDayPosts.map((post) => ({
+    '@type': 'CreativeWork',
+    name: post.data.title,
+    url: new URL(`/stuff/${post.id}/`, siteUrl).href,
+    dateCreated: post.data.date.toISOString(),
+  })),
+}
+
+function formatEvent(post: CollectionEntry<'blog'>): string {
+  const season = post.data.excerpt?.match(
+    /Netflix (Spring|Summer|Fall|Winter)/
+  )?.[1]
+  return `${season ? `${season} ` : ''}${post.data.date.getFullYear()}`
+}
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={socialImage}
+  imageAlt="Netflix Hack Days project collection"
+  structuredData={structuredData}
+>
+  <main id="main-content" class="clearfix post-content-box">
+    <article class="article-page collection-page">
+      <div class="page-content">
+        <div class="wrap-content">
+          <header class="header-page collection-header">
+            <h1 class="page-title">{pageTitle}</h1>
+            <p>{pageDescription}</p>
+          </header>
+          <div class="collection-grid">
+            {
+              hackDayPosts.map((post) => (
+                <article class="collection-card">
+                  {post.data.img && (
+                    <a href={`/stuff/${post.id}/`} class="collection-image">
+                      <Image
+                        src={post.data.img}
+                        alt={`${post.data.title} project preview`}
+                        widths={[400, 800]}
+                        sizes="(max-width: 640px) 100vw, 400px"
+                      />
+                    </a>
+                  )}
+                  <div class="collection-card-content">
+                    <div class="collection-meta">{formatEvent(post)}</div>
+                    <h2>
+                      <a href={`/stuff/${post.id}/`}>{post.data.title}</a>
+                    </h2>
+                    {post.data.excerpt && <p>{post.data.excerpt}</p>}
+                    <a class="collection-link" href={`/stuff/${post.id}/`}>
+                      View project <span aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</BaseLayout>
