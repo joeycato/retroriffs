@@ -1,0 +1,143 @@
+---
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
+const postById = new Map(posts.map((post) => [post.id, post]))
+
+const appDetails = [
+  {
+    id: 'tiktok-fave-save',
+    postId: 'fave-save',
+    label: 'TikTok Fave Save',
+    type: 'Desktop utility',
+    url: 'https://github.com/joeycato/tiktok-favesave',
+    action: 'View on GitHub',
+    description:
+      'A Windows and Mac utility for downloading favorited, liked, and shared TikTok videos in bulk from exported profile data.',
+  },
+  {
+    id: 'face-portal',
+    postId: 'faceportal-app',
+    label: 'Face Portal',
+    type: 'iPhone app',
+    url: 'https://apps.apple.com/us/app/face-portal/id1550631768',
+    action: 'View in the App Store',
+    description:
+      'A slit-scan video app that creates a customizable, three-dimensional expansion effect through an interactive on-screen portal.',
+  },
+  {
+    id: 'song-branch',
+    postId: 'song-branch',
+    label: 'Song Branch',
+    type: 'Interactive visualization',
+    url: 'https://songbranch.surge.sh/',
+    action: 'Launch the app',
+    description:
+      'An interactive song-lyric visualization with multiple graph views that reveal the structure and repetition within a song.',
+  },
+  {
+    id: 'rxify',
+    postId: 'rxify',
+    label: 'rxify',
+    type: 'Developer tool',
+    url: 'https://www.npmjs.com/package/rxify',
+    action: 'View on npm',
+    description:
+      'An RxJS library wrapper for exploring observables and operators through marble-diagram ASCII strings.',
+  },
+].map((app) => ({ ...app, post: postById.get(app.postId) }))
+
+const pageTitle = 'Other Apps'
+const pageDescription =
+  'Utilities, visualizations, and creative apps built by Joey Cato for desktop, mobile, and the web.'
+const socialImage = postById.get('fave-save')?.data.img
+const siteUrl = Astro.site?.toString() || 'https://joeycato.com/'
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: pageTitle,
+  description: pageDescription,
+  url: new URL('/stuff/other-apps/', siteUrl).href,
+  author: {
+    '@type': 'Person',
+    name: 'Joey Cato',
+    url: siteUrl,
+  },
+  hasPart: appDetails.map((app) => ({
+    '@type': 'SoftwareApplication',
+    name: app.label,
+    url: new URL(`/stuff/${app.postId}/`, siteUrl).href,
+    sameAs: app.url,
+    description: app.description,
+  })),
+}
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={socialImage}
+  imageAlt="TikTok Fave Save and other apps by Joey Cato"
+  structuredData={structuredData}
+>
+  <main id="main-content" class="clearfix post-content-box">
+    <article class="article-page collection-page other-apps-page">
+      <div class="page-content">
+        <div class="wrap-content">
+          <header class="header-page collection-header">
+            <h1 class="page-title">{pageTitle}</h1>
+            <p>{pageDescription}</p>
+          </header>
+          <nav class="collection-selector" aria-label="Choose an app">
+            {appDetails.map((app) => <a href={`#${app.id}`}>{app.label}</a>)}
+          </nav>
+          <div class="showcase-list">
+            {
+              appDetails.map(
+                (app) =>
+                  app.post && (
+                    <section class="showcase-section" id={app.id}>
+                      <a class="showcase-image" href={`/stuff/${app.postId}/`}>
+                        {app.post.data.img && (
+                          <Image
+                            src={app.post.data.img}
+                            alt={`${app.label} app preview`}
+                            widths={[400, 800]}
+                            sizes="(max-width: 700px) 100vw, 400px"
+                          />
+                        )}
+                      </a>
+                      <div class="showcase-content">
+                        <div class="collection-meta">
+                          {app.type} · {app.post.data.date.getFullYear()}
+                        </div>
+                        <h2>
+                          <a href={`/stuff/${app.postId}/`}>{app.label}</a>
+                        </h2>
+                        <p>{app.description}</p>
+                        <div class="showcase-actions">
+                          <a
+                            class="showcase-launch"
+                            href={`/stuff/${app.postId}/`}
+                          >
+                            Read the full project{' '}
+                            <span aria-hidden="true">→</span>
+                          </a>
+                          <a class="showcase-launch" href={app.url}>
+                            {app.action} <span aria-hidden="true">↗</span>
+                          </a>
+                        </div>
+                      </div>
+                    </section>
+                  )
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</BaseLayout>

@@ -42,6 +42,13 @@ const nostalgicDeepDiveIds = new Set([
 const nostalgicDeepDivePosts = posts.filter((post) =>
   nostalgicDeepDiveIds.has(post.id)
 )
+const otherAppIds = new Set([
+  'fave-save',
+  'faceportal-app',
+  'song-branch',
+  'rxify',
+])
+const otherAppPosts = posts.filter((post) => otherAppIds.has(post.id))
 const hackDayCover = hackDayPosts.find(
   (post) => post.id === 'hackday-videoviews'
 )?.data.img
@@ -54,6 +61,8 @@ const videoExperimentsCover = videoExperimentPosts.find(
 const nostalgicDeepDivesCover = nostalgicDeepDivePosts.find(
   (post) => post.id === 'paris-texas-1914'
 )?.data.img
+const otherAppsCover = otherAppPosts.find((post) => post.id === 'fave-save')
+  ?.data.img
 
 function highestPriority(collectionPosts: CollectionEntry<'blog'>[]): number {
   return Math.max(...collectionPosts.map((post) => post.data.priority), 0)
@@ -101,6 +110,14 @@ const collectionItems = [
     img: nostalgicDeepDivesCover,
     priority: highestPriority(nostalgicDeepDivePosts),
   },
+  {
+    id: 'other-apps',
+    title: 'Other Apps',
+    excerpt: 'Utilities, visualizations, and creative apps I have built',
+    href: '/stuff/other-apps/',
+    img: otherAppsCover,
+    priority: highestPriority(otherAppPosts),
+  },
 ].map((item) => ({ ...item, isCollection: true }))
 
 const standaloneItems = posts
@@ -110,7 +127,8 @@ const standaloneItems = posts
       !retroTvIds.has(post.id) &&
       !gameIds.has(post.id) &&
       !videoExperimentIds.has(post.id) &&
-      !nostalgicDeepDiveIds.has(post.id)
+      !nostalgicDeepDiveIds.has(post.id) &&
+      !otherAppIds.has(post.id)
   )
   .map((post) => ({
     id: post.id,
