@@ -15,7 +15,7 @@ Wow, time has flown! Yet another [Netflix Hack Day](https://medium.com/netflix-t
 To solve the puzzle, just rearrange the pieces by dragging and dropping them back onto the center grid. Difficulty can be adjusted in the top-right menu.
 You can also upload your own custom videos if you choose.
 
-_Note: This hack was developed/tested primarily with the desktop version of Google Chrome ( experience may vary on other browsers )_
+_Note: This hack was developed and tested primarily with the desktop version of Google Chrome (the experience may vary in other browsers)._
 
 Click [here](https://gorch.com/hacks/avp/) to play!
 

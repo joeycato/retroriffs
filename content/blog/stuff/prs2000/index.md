@@ -27,4 +27,4 @@ For the graphics I modeled the pieces in 3D with Amorphium then touched them up 
 
 <img class="aligncenter" src="https://gorch.com/images/prs.jpg" alt="" />
 
-Special Thanks to my good friend Will McWhorter who composed the theme music. He even made a <a title="Paper Rock Scissors Theme" href="https://gorch.com/games/prs/prs.mp3" target="_blank" rel="noopener">version</a> with vocals!
+Special thanks to my good friend Will McWhorter, who composed the theme music. He even made a <a title="Paper Rock Scissors Theme" href="https://gorch.com/games/prs/prs.mp3" target="_blank" rel="noopener">version</a> with vocals!

@@ -7,7 +7,7 @@ img: './favesavelogo.png'
 excerpt: A mass video downloader for your exported TikTok profile data
 ---
 
-Created this app as alternate way to mass download your favorited/liked/shared TikTok videos (before the Jan 19th U.S. ban goes into effect.) Under the hood, it's Python and yt_dlp and I created the Windows/Mac apps with PyInstaller ( and a few rounds of AI-assisted paired programming )
+I created this app as an alternative way to download your favorited, liked, and shared TikTok videos in bulk (before the January 19 U.S. ban was scheduled to go into effect). Under the hood, it uses Python and yt_dlp, and I created the Windows and Mac apps with PyInstaller (and a few rounds of AI-assisted pair programming).
 
 <img src="favesavescreen.png" style="width:780px" />
 

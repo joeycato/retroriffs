@@ -4,12 +4,12 @@ tags: [netflix, hackday]
 date: 2015-03-09
 priority: 69
 img: './saywhat.png'
-excerpt: Netflix Fall 2019 Hack Day Winner
+excerpt: Netflix Winter 2015 Hack Day Winner
 ---
 
 <img class="aligncenter" src="./saywhat.png" alt="" />
 
-**Say Whaaat!!!** provides a more convenient way to to catch missed dialogue as you watch Netflix by displaying
+**Say Whaaat!!!** provides a more convenient way to catch missed dialogue as you watch Netflix by displaying
 subtitles when you pause playback.
 
 It also provides the ability to navigate a film's timeline, caption by caption.

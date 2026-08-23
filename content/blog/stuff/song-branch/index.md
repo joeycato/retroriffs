@@ -13,7 +13,7 @@ Just released my latest project, [SongBranch](https://songbranch.surge.sh/). It'
 visualization app.
 
 The nodes are sized based on the word/phrase frequency. There are three different graph views:
-The default **Basic** view uses a custom algorithm to display a graph the song lyrics in the fewest nodes
+The default **Basic** view uses a custom algorithm to display a graph of the song lyrics in the fewest nodes
 possible. The **Standard** view displays each song verse as an individual node, whereas the **Detailed** view is a graph of each individual word.  
 You get interesting results from songs based on how the words are structured and repeated. Here are a few of my favorite findings:
 

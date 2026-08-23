@@ -7,9 +7,9 @@ img: ./logo.png
 excerpt: Tinkering with D3JS and SPARQL
 ---
 
-Created my first D3JS app just for fun! It's an interactive timeline of ages and life spans from past Academy Award winners ( best actors and actresses )
+I created my first D3.js app just for fun! It's an interactive timeline of ages and lifespans from past Academy Award winners (best actors and actresses).
 
-The life span is represented by a circular progress bar ( whereas white circles denote those who are still living. )
+Each lifespan is represented by a circular progress bar, while white circles denote people who are still living.
 
 The data itself was sourced from Wikidata using SPARQL queries to fetch the relevant data and images.
 

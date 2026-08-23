@@ -11,5 +11,5 @@ excerpt: An interactive TV simulator from the 2000's
 
 Excited today to announce the official launch of [My 2000's TV!](https://00s.myretrotvs.com/)
 
-This is my first major addition to the My Retro TVs side project in 7 years. Recently I rewrote the underlying code from the ground up ( to take better advantage of modern JavaScript and make things more modular.) Thankfully that work paid off and made it easier for me to slap on a new decade.
+This is my first major addition to the My Retro TVs side project in seven years. Recently, I rewrote the underlying code from the ground up (to take better advantage of modern JavaScript and make things more modular). Thankfully, that work paid off and made it easier for me to add a new decade.
 Hope you enjoy!

@@ -4,7 +4,7 @@ tags: [gamedev]
 date: 2015-03-25
 priority: 70
 img: ./pacpeeps.png
-excerpt: Pacman parallelized!
+excerpt: Pac-Man parallelized!
 ---
 
 <img class="aligncenter" src="./pacpeeps.png" alt="" />
@@ -12,6 +12,6 @@ excerpt: Pacman parallelized!
 Spent some vacation time making a small game. To win, you must eat all the dots, but with an added twist: All four mazes
 are navigated simultaneously :)
 
-Player controls: Arrow keys to move and SPACE to restart
+Player controls: arrow keys to move and SPACE to restart
 
 Click [here](https://gorch.com/pacpeeps) to play it.

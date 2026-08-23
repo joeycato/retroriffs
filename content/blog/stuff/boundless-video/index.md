@@ -9,7 +9,7 @@ excerpt: Slit-scan project
 
 <img class="aligncenter" src="./bvplogo.png" alt="" />
 
-Today I released the <b>Boundless video player</b>, a side project I've been tinkering on over the fast few months:
+Today I released the <b>Boundless video player</b>, a side project I've been tinkering on over the past few months:
 
 https://github.com/joeycato/boundlessvideoplayer
 

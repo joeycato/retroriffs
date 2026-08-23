@@ -26,9 +26,9 @@ I should briefly mention that while I work at Netflix, my official role there is
 consider myself a _video_ expert, even though it's a central component of our business.
 If anything, I'm just doing things like this to learn more! 😀
 
-## basic approach ( "slice, scale, and splice" )
+## basic approach ("slice, scale, and splice")
 
-The basic sync strategy I pursued was to initially split up each video into separate clip segments, demarcated by the timestamps of common geographic locations shared between the two clips ( i.e. all encountered street intersections. ) Afterwards, each _2003_ segment was compared with its _2018_ counterpart and ( generally speaking ) the shorter/fastest segment video was "slowed down" until its duration matched the longer/slower segment.
+The basic sync strategy I pursued was to initially split each video into separate clip segments, demarcated by the timestamps of common geographic locations shared between the two clips (i.e., all encountered street intersections). Afterwards, each _2003_ segment was compared with its _2018_ counterpart and, generally speaking, the shorter or faster segment was "slowed down" until its duration matched the longer or slower segment.
 
 <svg xmlns="https://www.w3.org/2000/svg" width="705.15" height="367.772" viewBox="0 0 186.571 97.306"><path fill="#00d9d0" fill-opacity=".502" d="M2.374 9.566h17.828v6.682H2.374z"/><path fill="#f0f" d="M19.144 9.566h36.349v6.682h-36.35z"/><path fill="#00f" d="M55.492 9.566h14.426v6.682H55.492z"/><path fill="#0f0" d="M69.918 9.566h25.765v6.682H69.918z"/><path fill="#00d9d0" fill-opacity=".502" d="M2.374 76.043h32.305v6.682H2.374z"/><path fill="#f0f" d="M34.15 76.043h26.785v6.682H34.15z"/><path fill="#00f" d="M60.935 76.043h28.687v6.682H60.935z"/><path fill="#0f0" d="M89.623 76.043h38.49v6.682h-38.49z"/><path d="M2.374 16.248h16.77L33.62 42.177H1.315z" fill="#ececec"/><text style="line-height:1.25" x="59.039" y="27.592" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="59.039" y="27.592" font-size="7.056">2003 clip segment durations</tspan></text><text style="line-height:1.25" x="59.039" y="110.573" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="59.039" y="110.573" font-size="7.056">2018 clip segment durations</tspan></text><path d="M36.266 48.859h36.349l-11.68 27.185H34.15zm19.226-32.611h14.426l34.03 25.929H75.261zm92.239 32.611h37.483l-32.469 27.185h-24.631z" fill="#ececec"/><path fill="#ffd5d5" d="M95.923 9.566h37.483v6.682H95.923zm32.191 66.477h24.63v6.682h-24.63z"/><path fill="#00d9d0" fill-opacity=".502" d="M1.316 42.177H33.62v6.682H1.316z"/><path fill="#f0f" d="M36.267 42.177h36.349v6.682h-36.35z"/><path fill="#0f0" d="M106.594 42.177h38.49v6.682h-38.49z"/><path fill="#00f" d="M75.26 42.177h28.688v6.682H75.26z"/><path fill="#ffd5d5" d="M147.732 42.177h37.483v6.682h-37.483z"/><path d="M69.918 16.248h25.765l49.401 25.929h-38.49z" fill="#ececec"/><text style="line-height:1.25" x="61.187" y="59.818" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="61.187" y="59.818" font-size="7.056">longer segment durations</tspan></text></svg>
 
@@ -37,7 +37,7 @@ Once this process was complete, it was then just a matter of splicing the longes
 _Note_: Originally I was able to accomplish this using Apple's _iMovie_ ( thanks to its nifty
 _[Speed](https://support.apple.com/kb/PH22933?locale=en_US&viewlocale=en_US)_ slider feature ) however
 over time I found it a bit tedious and error-prone ( the application supports only one primary video track and modifying
-the segment durations by hand didn't alway feel precise )
+the segment durations by hand didn't always feel precise)
 
 ## preparing the videos
 
@@ -75,7 +75,7 @@ segments would inconveniently affect the sound anyway and, besides, I can still 
 Next I'll define the official sync points of the two videos, i.e. those timestamps which represent common geographic
 positions shared between the two separate video timelines. These sync points are used to divide up the clip into
 multiple segments. Generating these by hand was cumbersome, so I decided to quickly hack together a JavaScript-based
-GUI ( affectionally named _Syncerator_ ) to manage this for me. By writing a custom app I was able to quickly use keyboard
+GUI (affectionately named _Syncerator_) to manage this for me. By writing a custom app, I was able to quickly use keyboard
 shortcuts to add, edit and delete the points. I also eventually extended it to include a live preview mode ( taking
 advantage of HTML5 Video's adjustable _playbackRate_ property. )
 
@@ -86,7 +86,7 @@ have different **[field of view](https://en.wikipedia.org/wiki/Field_of_view)** 
 wider viewing angle and closer objects appear more stretched ) This didn't bother me that much during actual playback so
 I just accepted it.
 
-## step 1: "slicing" ( splitting the clips into segments )
+## step 1: "slicing" (splitting the clips into segments)
 
 Once I have a list of curated timestamps, I can then iterate through them and extract the in-between segments:
 
@@ -111,7 +111,7 @@ During the extraction you'll notice that I'm also artificially increasing the fr
 calculated duration that might not perfectly align with the base frame rate. This may seem like a trivial concern at
 first blush but as the multiple segments are concatenated it could have a cumulative effect causing the resulting videos to progressively fall more out of sync.
 
-## step 2: "scaling" ( extending the shorter segments )
+## step 2: "scaling" (extending the shorter segments)
 
 Now that all of the clip segments have been extracted, the next step is to evaluate them ( comparing the _2003_ versions against _2018_)
 
@@ -120,7 +120,7 @@ multiplied on the other segment in order to match the same duration.
 
 **scaleFactor** = _durationOfLongerSegment_ / _durationOfShorterSegment_
 
-In the above example, since the _2003_ sample segment ( 2 sec ) is shorter than the _2018_ sample segment ( 3 sec ), a scale factor for the _2003_ version will be determined:
+In the above example, since the _2003_ sample segment (2 sec) is shorter than the _2018_ sample segment (3 sec), a scale factor for the _2003_ version will be determined:
 
 **scaleFactor** = 3 seconds / 2 seconds = 1.5
 
@@ -137,7 +137,7 @@ in order to change the resulting duration, I just need to multiply the scale fac
 
 _Note:_ I'm favoring the longer segment duration in the comparisons above to keep this guide simple. It's a safe default to use if you want to maximize scenic footage but it's not always ideal. For example, it doesn't make much sense to slow a video segment to a crawl just because in the other segment a car is stuck waiting patiently 😑 at a red light. For that reason, I actually chose to override this behavior in a few cases.
 
-## step 3: "splicing" ( reconnecting the segments )
+## step 3: "splicing" (reconnecting the segments)
 
 At this point I've compared all of the segments so finally I'm going to use them to recreate the full videos - but include the newer (i.e. longer) versions this time.
 To simplify this, I'm creating an ordered list of clips for each year:
@@ -179,11 +179,11 @@ final videos together. Once again, FFmpeg makes things easy for us:
 
 - **-filter_complex** _filterType_ <span style="color:blue"> --Select complex video filter</span>
 
-( The **vstack** filter type above is informing FFmpeg to apply a "vertical stack" layout on the two input videos. )
+(The **vstack** filter type above tells FFmpeg to apply a "vertical stack" layout to the two input videos.)
 
 Having a split-screen video is cool and all, but doesn't it doesn't provide much context to someone viewing it for the
 first time. So I thought I'd have a little fun and add _Back To The Future_-esque LCD clock labels to each pane (
-Special Thanks to Samuel Reynolds for creating the retro-LCD [font](https://www.dafont.com/lcd-lcd-mono.font) that was
+Special thanks to Samuel Reynolds for creating the retro-LCD [font](https://www.dafont.com/lcd-lcd-mono.font) that was
 used. )
 
 The following command adds centered labels at the top of each pane of the 960x1080p video:
@@ -205,15 +205,15 @@ I'm almost done at this point. I just need to do something about the really larg
 decision of sticking with the lossless AVI format 😀 )
 
 That's not a problem since in this final step I'm going to transcode it to a much smaller Internet-friendly MP4 video
-format by using the H.264 codec. Also, since I'm ultimately uploading this video to YouTube anyway, I'll include all of Google's recommending
-settings ( Credit to Jernej Virag for nicely documenting the extra params [here](https://www.virag.si/2015/06/encoding-videos-for-youtube-with-ffmpeg/)):
+format by using the H.264 codec. Also, since I'm ultimately uploading this video to YouTube anyway, I'll include all of Google's recommended
+settings (credit to Jernej Virag for documenting the extra parameters [here](https://www.virag.si/2015/06/encoding-videos-for-youtube-with-ffmpeg/)):
 
 `ffmpeg -i final_splitscreen_labeled.avi -codec:v libx264`
 `-crf 21 -bf 2 -flags +cgop -pix_fmt yuv420p -codec:a aac`
 `-strict -2 -b:a 384k -r:a 48000 -movflags faststart final_splitscreen_labeled.mp4`
 
 Now is a good time to mention that the above command will actually produce a _lossy_ video, although the [**Constant
-Rate Factor**](https://trac.ffmpeg.org/wiki/Encode/H.264#crf) ( H.264's default quality setting )
+Rate Factor**](https://trac.ffmpeg.org/wiki/Encode/H.264#crf) (H.264's default quality setting)
 can be directly configured by changing the **-crf** value. While the above CRF value of _21_ introduces some quality
 loss, it's a nice compromise since it's perceptibly lossless in most cases while having the benefit of better compression.
 

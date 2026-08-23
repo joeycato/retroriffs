@@ -16,13 +16,13 @@ subtitles during playback.
 
 Basically, each time a subtitle changes on-screen, we add the following overlays:
 
-- Image stickers ( sourced by [GIPHY API](https://developers.giphy.com/) search’s top result )
-- Emojis ( based on [moji-translate](https://www.npmjs.com/package/moji-translate) library )
-- Mood colorization ( based on [AFINN sentiment](https://www.npmjs.com/package/sentiment) library )
+- Image stickers (sourced from the top [GIPHY API](https://developers.giphy.com/) search result)
+- Emojis (based on the [moji-translate](https://www.npmjs.com/package/moji-translate) library)
+- Mood colorization (based on the [AFINN sentiment](https://www.npmjs.com/package/sentiment) library)
 - As a bonus, if we detect song lyrics a disco ball drops down from the top of the screen
 
 <br/>
-Special Thanks to Sai Shenoy and Jacklyn Ng for helping out!
+Special thanks to Sai Shenoy and Jacklyn Ng for helping out!
 
 ![subtitlereactions1](subtitlereactions1.png)
 

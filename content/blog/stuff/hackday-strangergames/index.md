@@ -19,7 +19,7 @@ some kind of video game homage as well. It also interested me to design somethin
 era-appropriate. Since our _Stranger Things_ story begins in 1983, it seemed logical to aim for an [Atari 2600](https://en.wikipedia.org/wiki/Atari_2600_hardware) aesthetic. Even the show itself referenced Atari, so that was all the convincing I needed :)
 
 In the end I decided to borrow game-play elements from [Frogger](https://en.wikipedia.org/wiki/Frogger) and
-[Pacman](<https://en.wikipedia.org/wiki/Pac-Man_(1982_video_game)>) ( though the demon slugs were loosely inspired by the
+[Pac-Man](<https://en.wikipedia.org/wiki/Pac-Man_(1982_video_game)>) (though the demon slugs were loosely inspired by the
 Brain enemy's cruise missiles from [Robotron](https://www.atariprotos.com/5200/software/robotron/robotron.htm) )
 Projecting the game screen onto the various TV sets was a bit of an afterthought ( I had recently noticed that the
 television set makes numerous appearances throughout the episodes, so I figured including them would improve the
