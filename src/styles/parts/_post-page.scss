@@ -123,6 +123,13 @@
   max-width: 720px;
   margin: 10px auto 35px;
 
+  .collection-logo {
+    display: block;
+    width: min(100%, 600px);
+    height: auto;
+    margin: 0 auto 20px;
+  }
+
   p {
     margin: 0;
     font-size: 17px;

@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import type { CollectionEntry } from 'astro:content'
 import { Image } from 'astro:assets'
+import retroTvCover from '../assets/share-logo-square-v3.png'
 import BaseLayout from '../layouts/BaseLayout.astro'
 
 const posts = (await getCollection('blog')) as CollectionEntry<'blog'>[]
@@ -52,8 +53,6 @@ const otherAppPosts = posts.filter((post) => otherAppIds.has(post.id))
 const hackDayCover = hackDayPosts.find(
   (post) => post.id === 'hackday-videoviews'
 )?.data.img
-const retroTvCover = retroTvPosts.find((post) => post.id === 'my80stv')?.data
-  .img
 const gamesCover = gamePosts.find((post) => post.id === 'bloops')?.data.img
 const videoExperimentsCover = videoExperimentPosts.find(
   (post) => post.id === 'boundless-video'
