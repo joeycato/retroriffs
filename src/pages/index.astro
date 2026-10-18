@@ -188,7 +188,7 @@ const structuredData = {
               <Image
                 src={item.img}
                 alt={`${item.title} ${item.isCollection ? 'collection' : 'project'} preview`}
-                class="page-image"
+                class:list={['page-image', item.id === 'myretrotunes' && 'logo-image']}
                 widths={[400, 800]}
                 sizes="(max-width: 768px) 100vw, 30vw"
               />
